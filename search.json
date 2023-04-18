@@ -14,6 +14,13 @@
     "text": "In this workshop, we’ll cover the how and why of processing accelerometer data using open-source tools. Specifically, we’ll focus on the popular GGIR package.\n\n\nWe will cover:\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
   },
   {
+    "objectID": "index.html#workshop-background",
+    "href": "index.html#workshop-background",
+    "title": "Accelerometer Processing Workshop",
+    "section": "",
+    "text": "In this workshop, we’ll cover the how and why of processing accelerometer data using open-source tools. Specifically, we’ll focus on the popular GGIR package.\n\n\nWe will cover:\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
+  },
+  {
     "objectID": "index.html#getting-setup",
     "href": "index.html#getting-setup",
     "title": "Accelerometer Processing Workshop",
@@ -32,14 +39,14 @@
     "href": "slides.html#why-me",
     "title": "Workshop Slides",
     "section": "Why Me?",
-    "text": "Why Me?\n\nMore than a decade working with accelerometers\nProjects with >25k accelerometers\nContributed code to GGIR\n\nDeveloped packages for distributed processing"
+    "text": "Why Me?\n\nMore than a decade working with accelerometers\nProjects with &gt;25k accelerometers\nContributed code to GGIR\n\nDeveloped packages for distributed processing"
   },
   {
     "objectID": "slides.html#overview-of-the-workshop",
     "href": "slides.html#overview-of-the-workshop",
     "title": "Workshop Slides",
     "section": "Overview of the workshop",
-    "text": "Overview of the workshop\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
+    "text": "Overview of the workshop\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\n. . .\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
   },
   {
     "objectID": "slides.html#basics-of-accelerometer-data",
