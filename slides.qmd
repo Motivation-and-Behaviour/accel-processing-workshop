@@ -26,7 +26,7 @@ Please go to [bit.ly/GGIRWorkshop](https://bit.ly/GGIRWorkshop) and follow the *
 * Developed packages for distributed processing
 ![](imgs/SleepIPD.png)
 
-## Overview of the workshop
+## Overview of the workshop  {.smaller}
 
 ### Objectives
 
