@@ -1,0 +1,23 @@
+---
+title: "Workshop Slides"
+author: "Taren Sanders"
+date: "2023-04-21"
+format: revealjs
+---
+
+# Introduction
+
+## Workshop Setup
+
+If you'd like to participate, please go to 
+
+## Welcome and registration
+
+- Introductions
+- Registration
+
+## Overview of the workshop
+
+1. Objectives
+2. Agenda
+3. Expectations
