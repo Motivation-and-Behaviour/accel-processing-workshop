@@ -9,7 +9,8 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.475">
 
-  <meta name="author" content="Taren Sanders">
+  <meta name="author" content="Dr Taren Sanders">
+  <meta name="dcterms.date" content="2023-04-21">
   <title>Accelerometer Processing Workshop - Workshop Slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,6 +29,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -329,39 +394,272 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Taren Sanders 
+Dr Taren Sanders 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            Institute for Postive Psychology and Education, Australian Catholic University
+          </p>
+    </div>
 </div>
 
-  <p class="date">4/21/23</p>
+  <p class="date">21 April 2023</p>
+</section>
+<section id="before-we-start" class="slide level2">
+<h2>Before We Start</h2>
+<p>Please go to <a href="https://bit.ly/GGIRWorkshop">bit.ly/GGIRWorkshop</a> and follow the <em>Getting Started</em> instructions.</p>
 </section>
 <section>
-<section id="introduction" class="title-slide slide level1 center">
+<section id="introduction" class="title-slide slide level1 center" data-background="#3C1053">
 <h1>Introduction</h1>
 
 </section>
-<section id="workshop-setup" class="slide level2">
-<h2>Workshop Setup</h2>
-<p>If you’d like to participate, please go to</p>
-</section>
-<section id="welcome-and-registration" class="slide level2">
-<h2>Welcome and registration</h2>
+<section id="why-me" class="slide level2">
+<h2>Why Me?</h2>
 <ul>
-<li class="fragment">Introductions</li>
-<li class="fragment">Registration</li>
+<li class="fragment">More than a decade working with accelerometers</li>
+<li class="fragment">Projects with &gt;25k accelerometers</li>
+<li class="fragment">Contributed code to <code>GGIR</code><br>
+<img data-src="imgs/GGIR_Contribs.png"></li>
+<li class="fragment">Developed packages for distributed processing <img data-src="imgs/SleepIPD.png"></li>
 </ul>
 </section>
 <section id="overview-of-the-workshop" class="slide level2">
 <h2>Overview of the workshop</h2>
-<ol type="1">
-<li class="fragment">Objectives</li>
-<li class="fragment">Agenda</li>
-<li class="fragment">Expectations</li>
-</ol>
+<h3 id="objectives">Objectives</h3>
+<ul>
+<li class="fragment">Understand why open-source methods matter</li>
+<li class="fragment">Have a basic understanding of R</li>
+<li class="fragment">Understand how to process accelerometer data with GGIR, and interpret the output</li>
+</ul>
+<h3 id="agenda">Agenda</h3>
+<ul>
+<li class="fragment">The advantages (and some disadvantages) of using open-source processing methods</li>
+<li class="fragment">The basics of using R</li>
+<li class="fragment">Installing and running <code>GGIR</code></li>
+<li class="fragment">Understanding the settings and options</li>
+<li class="fragment">Interpreting the output</li>
+<li class="fragment">Common issues and troubleshooting steps</li>
+<li class="fragment">Advanced options (e.g., day segment analysis)</li>
+</ul>
+</section></section>
+<section>
+<section id="understanding-accelerometer-data-and-the-need-for-ggir" class="title-slide slide level1 center" data-background="#3C1053">
+<h1>Understanding Accelerometer Data and the Need for GGIR</h1>
 
-<div class="footer footer-default">
+</section>
+<section id="basics-of-accelerometer-data" class="slide level2">
+<h2>Basics of accelerometer data</h2>
+<ul>
+<li class="fragment">What is accelerometer data?</li>
+<li class="fragment">Common use cases</li>
+</ul>
+</section>
+<section id="limitations-of-proprietary-methods" class="slide level2">
+<h2>Limitations of proprietary methods</h2>
+<ul>
+<li class="fragment">Lack of customization</li>
+<li class="fragment">Limited transparency</li>
+<li class="fragment">Vendor lock-in</li>
+</ul>
+</section>
+<section id="benefits-of-using-ggir" class="slide level2">
+<h2>Benefits of using GGIR</h2>
+<ul>
+<li class="fragment">Open-source nature</li>
+<li class="fragment">Customizability</li>
+<li class="fragment">Comprehensive analysis tools</li>
+</ul>
+</section>
+<section id="activity-group-discussion" class="slide level2">
+<h2>Activity: Group discussion</h2>
+<p>Share your experiences with accelerometer data and proprietary methods</p>
+</section></section>
+<section>
+<section id="a-very-quick-intro-to-r" class="title-slide slide level1 center" data-background="#3C1053">
+<h1>A (Very) Quick Intro to R</h1>
 
+</section>
+<section id="what-is-r" class="slide level2">
+<h2>What is R?</h2>
+<ul>
+<li class="fragment">R is a free, open-source programming language</li>
+<li class="fragment">Specially designed for data analysis and statistics</li>
+<li class="fragment">Widely used in research, data science, and industry</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="an-example">An example</h3>
+<p>Fitting a simple linear model:</p>
+<p><span class="math display">\[\hat{y} = \beta_0 + \beta_1x\]</span></p>
+<div class="fragment">
+<p><strong>R Code</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fit a linear model</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">lm</span>(y <span class="sc">~</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Python Code</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Import packages</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Add a constant term to x (statsmodels doesn't add one by default)</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>x <span class="op">=</span> sm.add_constant(x)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Fit the linear model</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>model <span class="op">=</span> sm.OLS(y, x).fit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="why-use-r" class="slide level2">
+<h2>Why use R?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="pros">Pros</h3>
+<ul>
+<li class="fragment">Free</li>
+<li class="fragment">Reproducible</li>
+<li class="fragment">Extensive set of add-on tools and packages</li>
+<li class="fragment">Typeset as you go</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="cons">Cons</h3>
+<ul>
+<li class="fragment">Steeper learning curve than point-and-click interfaces</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="r-resources" class="slide level2">
+<h2>R Resources</h2>
+<h3 id="r-for-data-science">R for Data Science</h3>
+<p><a href="https://r4ds.had.co.nz/">r4ds.had.co.nz</a></p>
+<h3 id="software-carpentry">Software Carpentry</h3>
+<p><a href="http://swcarpentry.github.io">swcarpentry.github.io</a></p>
+<div>
+<ul>
+<li><a href="http://swcarpentry.github.io/r-novice-inflammation/">Programming with R</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-gapminder/">R for Reproducible Scientific Analysis</a></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="setting-up-ggir" class="title-slide slide level1 center">
+<h1>Setting Up GGIR</h1>
+
+</section>
+<section id="installing-and-loading-ggir-in-r" class="slide level2">
+<h2>Installing and loading GGIR in R</h2>
+<ul>
+<li class="fragment">Software requirements</li>
+<li class="fragment">Installing and loading the package</li>
+</ul>
+</section>
+<section id="preparing-the-data" class="slide level2">
+<h2>Preparing the data</h2>
+<ul>
+<li class="fragment">Formatting the data</li>
+<li class="fragment">Organizing the files</li>
+</ul>
+</section>
+<section id="configuring-the-settings" class="slide level2">
+<h2>Configuring the settings</h2>
+<ul>
+<li class="fragment">Customizing the analysis</li>
+<li class="fragment">Setting the output directory</li>
+</ul>
+</section>
+<section id="activity-hands-on-session" class="slide level2">
+<h2>Activity: Hands-on session</h2>
+<p>Set up GGIR with sample data</p>
+</section></section>
+<section>
+<section id="processing-accelerometer-data-with-ggir" class="title-slide slide level1 center">
+<h1>Processing Accelerometer Data with GGIR</h1>
+
+</section>
+<section id="running-the-main-ggir-function" class="slide level2">
+<h2>Running the main GGIR function</h2>
+<ul>
+<li class="fragment">Understanding the process flow</li>
+<li class="fragment">Interpreting the progress messages</li>
+</ul>
+</section>
+<section id="common-issues-and-troubleshooting" class="slide level2">
+<h2>Common issues and troubleshooting</h2>
+<ul>
+<li class="fragment">Dealing with errors</li>
+<li class="fragment">Optimizing performance</li>
+</ul>
+</section>
+<section id="activity-hands-on-session-1" class="slide level2">
+<h2>Activity: Hands-on session</h2>
+<p>Process sample accelerometer data</p>
+</section></section>
+<section>
+<section id="interpreting-the-output" class="title-slide slide level1 center">
+<h1>Interpreting the Output</h1>
+
+</section>
+<section id="understanding-the-output-files" class="slide level2">
+<h2>Understanding the output files</h2>
+<ul>
+<li class="fragment">Summary statistics</li>
+<li class="fragment">Sleep analysis</li>
+<li class="fragment">Physical activity analysis</li>
+</ul>
+</section>
+<section id="visualizing-the-data" class="slide level2">
+<h2>Visualizing the data</h2>
+<ul>
+<li class="fragment">Time-series plots</li>
+<li class="fragment">Summary plots</li>
+</ul>
+</section>
+<section id="activity-group-discussion-1" class="slide level2">
+<h2>Activity: Group discussion</h2>
+<p>Interpret the output from the hands-on session</p>
+</section></section>
+<section>
+<section id="exploring-advanced-options-in-ggir" class="title-slide slide level1 center">
+<h1>Exploring Advanced Options in GGIR</h1>
+
+</section>
+<section id="customizing-sleep-and-physical-activity-metrics" class="slide level2">
+<h2>Customizing sleep and physical activity metrics</h2>
+<ul>
+<li class="fragment">Modifying detection thresholds</li>
+<li class="fragment">Adjusting epoch lengths</li>
+</ul>
+</section>
+<section id="working-with-multiple-devices-and-data-sources" class="slide level2">
+<h2>Working with multiple devices and data sources</h2>
+<ul>
+<li class="fragment">Combining data from different accelerometers</li>
+<li class="fragment">Integrating external data sources</li>
+</ul>
+</section>
+<section id="activity-hands-on-session-2" class="slide level2">
+<h2>Activity: Hands-on session</h2>
+<p>Explore advanced options with sample data</p>
+</section></section>
+<section>
+<section id="wrap-up-and-qa" class="title-slide slide level1 center">
+<h1>Wrap-up and Q&amp;A</h1>
+
+</section>
+<section id="recap-of-the-workshop" class="slide level2">
+<h2>Recap of the workshop</h2>
+<p>Brief summary of the workshop</p>
+</section>
+<section id="open-discussion-and-qa" class="slide level2">
+<h2>Open discussion and Q&amp;A</h2>
+<p>Ask questions and share your thoughts</p>
+
+
+<img src="https://forms.acu.edu.au/__data/assets/file/0020/2330642/ACU_MASTERBRAND_POS_RGB.svg" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>motivation-and-behaviour.github.io/accel-processing-workshop</p>
 </div>
 </section></section>
     </div>
@@ -518,7 +816,7 @@ Taren Sanders
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
@@ -575,6 +873,44 @@ Taren Sanders
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

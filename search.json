@@ -1,37 +1,198 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Accelerometer Processing Workshop",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "In this workshop, we’ll cover the how and why of processing accelerometer data using open-source tools. Specifically, we’ll focus on the popular GGIR package.\n\n\nWe will cover:\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
   },
   {
-    "objectID": "slides.html#workshop-setup",
-    "href": "slides.html#workshop-setup",
-    "title": "Workshop Slides",
-    "section": "Workshop Setup",
-    "text": "Workshop Setup\nIf you’d like to participate, please go to"
+    "objectID": "index.html#getting-setup",
+    "href": "index.html#getting-setup",
+    "title": "Accelerometer Processing Workshop",
+    "section": "Getting Setup",
+    "text": "Getting Setup\nTo particpate in the workshop, you’ll need three things:\n\nR installed on your machine\nRStudio (or another IDE like VS Code, if you prefer)\nThe example files and scripts\n\n\nInstall R\nWe’ll be using Version 4.2.x for this workshop, but it should work for versions greater than 4. If you’re running an older version of R, now is a great time to upgrade.\nTo install R, navigate head to CRAN and follow the instructions to install the version that matches your operating system.\n\n\nInstall RStudio\nRStudio is an Integrated Development Environment (IDE) - a way to interact with programming languages. RStudio is specifically designed with R in mind, so it’s a great place to start if you have never used R before.\nYou can install RStudio from here. Again, just follow the install steps they provide to get started.\n\n\nDownload Workshop Files\nI’ve provided some example data files and scripts to use during the workshop. To download these:\n\nHead to the GitHub Repository\nClick Code then Download ZIP\n\nUnzip the files. You will only need the Workshop Files folder."
   },
   {
-    "objectID": "slides.html#welcome-and-registration",
-    "href": "slides.html#welcome-and-registration",
+    "objectID": "slides.html#before-we-start",
+    "href": "slides.html#before-we-start",
     "title": "Workshop Slides",
-    "section": "Welcome and registration",
-    "text": "Welcome and registration\n\nIntroductions\nRegistration"
+    "section": "Before We Start",
+    "text": "Before We Start\nPlease go to bit.ly/GGIRWorkshop and follow the Getting Started instructions."
+  },
+  {
+    "objectID": "slides.html#why-me",
+    "href": "slides.html#why-me",
+    "title": "Workshop Slides",
+    "section": "Why Me?",
+    "text": "Why Me?\n\nMore than a decade working with accelerometers\nProjects with >25k accelerometers\nContributed code to GGIR\n\nDeveloped packages for distributed processing"
   },
   {
     "objectID": "slides.html#overview-of-the-workshop",
     "href": "slides.html#overview-of-the-workshop",
     "title": "Workshop Slides",
     "section": "Overview of the workshop",
-    "text": "Overview of the workshop\n\nObjectives\nAgenda\nExpectations"
+    "text": "Overview of the workshop\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "objectID": "slides.html#basics-of-accelerometer-data",
+    "href": "slides.html#basics-of-accelerometer-data",
+    "title": "Workshop Slides",
+    "section": "Basics of accelerometer data",
+    "text": "Basics of accelerometer data\n\nWhat is accelerometer data?\nCommon use cases"
+  },
+  {
+    "objectID": "slides.html#limitations-of-proprietary-methods",
+    "href": "slides.html#limitations-of-proprietary-methods",
+    "title": "Workshop Slides",
+    "section": "Limitations of proprietary methods",
+    "text": "Limitations of proprietary methods\n\nLack of customization\nLimited transparency\nVendor lock-in"
+  },
+  {
+    "objectID": "slides.html#benefits-of-using-ggir",
+    "href": "slides.html#benefits-of-using-ggir",
+    "title": "Workshop Slides",
+    "section": "Benefits of using GGIR",
+    "text": "Benefits of using GGIR\n\nOpen-source nature\nCustomizability\nComprehensive analysis tools"
+  },
+  {
+    "objectID": "slides.html#activity-group-discussion",
+    "href": "slides.html#activity-group-discussion",
+    "title": "Workshop Slides",
+    "section": "Activity: Group discussion",
+    "text": "Activity: Group discussion\nShare your experiences with accelerometer data and proprietary methods"
+  },
+  {
+    "objectID": "slides.html#what-is-r",
+    "href": "slides.html#what-is-r",
+    "title": "Workshop Slides",
+    "section": "What is R?",
+    "text": "What is R?\n\nR is a free, open-source programming language\nSpecially designed for data analysis and statistics\nWidely used in research, data science, and industry"
+  },
+  {
+    "objectID": "slides.html#why-use-r",
+    "href": "slides.html#why-use-r",
+    "title": "Workshop Slides",
+    "section": "Why use R?",
+    "text": "Why use R?\n\n\nPros\n\nFree\nReproducible\nExtensive set of add-on tools and packages\nTypeset as you go\n\n\nCons\n\nSteeper learning curve than point-and-click interfaces"
+  },
+  {
+    "objectID": "slides.html#r-resources",
+    "href": "slides.html#r-resources",
+    "title": "Workshop Slides",
+    "section": "R Resources",
+    "text": "R Resources\nR for Data Science\nr4ds.had.co.nz\nSoftware Carpentry\nswcarpentry.github.io\n\n\nProgramming with R\nR for Reproducible Scientific Analysis"
+  },
+  {
+    "objectID": "slides.html#installing-and-loading-ggir-in-r",
+    "href": "slides.html#installing-and-loading-ggir-in-r",
+    "title": "Workshop Slides",
+    "section": "Installing and loading GGIR in R",
+    "text": "Installing and loading GGIR in R\n\nSoftware requirements\nInstalling and loading the package"
+  },
+  {
+    "objectID": "slides.html#preparing-the-data",
+    "href": "slides.html#preparing-the-data",
+    "title": "Workshop Slides",
+    "section": "Preparing the data",
+    "text": "Preparing the data\n\nFormatting the data\nOrganizing the files"
+  },
+  {
+    "objectID": "slides.html#configuring-the-settings",
+    "href": "slides.html#configuring-the-settings",
+    "title": "Workshop Slides",
+    "section": "Configuring the settings",
+    "text": "Configuring the settings\n\nCustomizing the analysis\nSetting the output directory"
+  },
+  {
+    "objectID": "slides.html#activity-hands-on-session",
+    "href": "slides.html#activity-hands-on-session",
+    "title": "Workshop Slides",
+    "section": "Activity: Hands-on session",
+    "text": "Activity: Hands-on session\nSet up GGIR with sample data"
+  },
+  {
+    "objectID": "slides.html#running-the-main-ggir-function",
+    "href": "slides.html#running-the-main-ggir-function",
+    "title": "Workshop Slides",
+    "section": "Running the main GGIR function",
+    "text": "Running the main GGIR function\n\nUnderstanding the process flow\nInterpreting the progress messages"
+  },
+  {
+    "objectID": "slides.html#common-issues-and-troubleshooting",
+    "href": "slides.html#common-issues-and-troubleshooting",
+    "title": "Workshop Slides",
+    "section": "Common issues and troubleshooting",
+    "text": "Common issues and troubleshooting\n\nDealing with errors\nOptimizing performance"
+  },
+  {
+    "objectID": "slides.html#activity-hands-on-session-1",
+    "href": "slides.html#activity-hands-on-session-1",
+    "title": "Workshop Slides",
+    "section": "Activity: Hands-on session",
+    "text": "Activity: Hands-on session\nProcess sample accelerometer data"
+  },
+  {
+    "objectID": "slides.html#understanding-the-output-files",
+    "href": "slides.html#understanding-the-output-files",
+    "title": "Workshop Slides",
+    "section": "Understanding the output files",
+    "text": "Understanding the output files\n\nSummary statistics\nSleep analysis\nPhysical activity analysis"
+  },
+  {
+    "objectID": "slides.html#visualizing-the-data",
+    "href": "slides.html#visualizing-the-data",
+    "title": "Workshop Slides",
+    "section": "Visualizing the data",
+    "text": "Visualizing the data\n\nTime-series plots\nSummary plots"
+  },
+  {
+    "objectID": "slides.html#activity-group-discussion-1",
+    "href": "slides.html#activity-group-discussion-1",
+    "title": "Workshop Slides",
+    "section": "Activity: Group discussion",
+    "text": "Activity: Group discussion\nInterpret the output from the hands-on session"
+  },
+  {
+    "objectID": "slides.html#customizing-sleep-and-physical-activity-metrics",
+    "href": "slides.html#customizing-sleep-and-physical-activity-metrics",
+    "title": "Workshop Slides",
+    "section": "Customizing sleep and physical activity metrics",
+    "text": "Customizing sleep and physical activity metrics\n\nModifying detection thresholds\nAdjusting epoch lengths"
+  },
+  {
+    "objectID": "slides.html#working-with-multiple-devices-and-data-sources",
+    "href": "slides.html#working-with-multiple-devices-and-data-sources",
+    "title": "Workshop Slides",
+    "section": "Working with multiple devices and data sources",
+    "text": "Working with multiple devices and data sources\n\nCombining data from different accelerometers\nIntegrating external data sources"
+  },
+  {
+    "objectID": "slides.html#activity-hands-on-session-2",
+    "href": "slides.html#activity-hands-on-session-2",
+    "title": "Workshop Slides",
+    "section": "Activity: Hands-on session",
+    "text": "Activity: Hands-on session\nExplore advanced options with sample data"
+  },
+  {
+    "objectID": "slides.html#recap-of-the-workshop",
+    "href": "slides.html#recap-of-the-workshop",
+    "title": "Workshop Slides",
+    "section": "Recap of the workshop",
+    "text": "Recap of the workshop\nBrief summary of the workshop"
+  },
+  {
+    "objectID": "slides.html#open-discussion-and-qa",
+    "href": "slides.html#open-discussion-and-qa",
+    "title": "Workshop Slides",
+    "section": "Open discussion and Q&A",
+    "text": "Open discussion and Q&A\nAsk questions and share your thoughts\n\n\n\nmotivation-and-behaviour.github.io/accel-processing-workshop"
   }
 ]
