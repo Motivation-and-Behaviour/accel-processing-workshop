@@ -1,23 +1,245 @@
 ---
 title: "Workshop Slides"
-author: "Taren Sanders"
 date: "2023-04-21"
+date-format: "DD MMMM YYYY"
 format: revealjs
+echo: true
+eval: false
+author:
+  name: Dr Taren Sanders
+  affiliations:
+    - Institute for Postive Psychology and Education, Australian Catholic University
 ---
 
-# Introduction
+## Before We Start
 
-## Workshop Setup
+Please go to [bit.ly/GGIRWorkshop](https://bit.ly/GGIRWorkshop) and follow the *Getting Started* instructions.
 
-If you'd like to participate, please go to 
+# Introduction  {background="#3C1053"}
 
-## Welcome and registration
+## Why Me?
 
-- Introductions
-- Registration
+* More than a decade working with accelerometers
+* Projects with >25k accelerometers
+* Contributed code to `GGIR`  
+![](imgs/GGIR_Contribs.png)
+* Developed packages for distributed processing
+![](imgs/SleepIPD.png)
 
 ## Overview of the workshop
 
-1. Objectives
-2. Agenda
-3. Expectations
+### Objectives
+
+* Understand why open-source methods matter
+* Have a basic understanding of R
+* Understand how to process accelerometer data with GGIR, and interpret the output
+
+. . .
+
+### Agenda
+
+* The advantages (and some disadvantages) of using open-source processing methods
+* The basics of using R
+* Installing and running `GGIR`
+* Understanding the settings and options
+* Interpreting the output
+* Common issues and troubleshooting steps
+* Advanced options (e.g., day segment analysis)
+
+# Understanding Accelerometer Data and the Need for GGIR {background="#3C1053"}
+
+## Basics of accelerometer data
+
+- What is accelerometer data?
+- Common use cases
+
+## Limitations of proprietary methods
+
+- Lack of customization
+- Limited transparency
+- Vendor lock-in
+
+
+## Benefits of using GGIR
+
+- Open-source nature
+- Customizability
+- Comprehensive analysis tools
+
+
+## Activity: Group discussion
+
+Share your experiences with accelerometer data and proprietary methods
+
+# A (Very) Quick Intro to R {background="#3C1053"}
+
+## What is R?
+
+* R is a free, open-source programming language
+* Specially designed for data analysis and statistics
+* Widely used in research, data science, and industry
+
+---
+
+### An example
+
+Fitting a simple linear model:
+
+$$\hat{y} = \beta_0 + \beta_1x$$
+
+. . .
+
+**R Code**
+
+```{r}
+# Fit a linear model
+lm(y ~ x)
+```
+
+. . .
+
+**Python Code**
+
+```{.python}
+# Import packages
+import numpy as np
+import statsmodels.api as sm
+
+# Add a constant term to x (statsmodels doesn't add one by default)
+x = sm.add_constant(x)
+
+# Fit the linear model
+model = sm.OLS(y, x).fit()
+```
+
+## Why use R?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### Pros
+
+* Free
+* Reproducible
+* Extensive set of add-on tools and packages
+* Typeset as you go
+
+:::
+
+::: {.column width="50%"}
+### Cons
+
+* Steeper learning curve than point-and-click interfaces
+
+:::
+
+::::
+
+## R Resources
+
+### R for Data Science
+
+[r4ds.had.co.nz](https://r4ds.had.co.nz/)
+
+### Software Carpentry
+
+[swcarpentry.github.io](http://swcarpentry.github.io)
+
+::: {.nonincremental}
+* [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
+* [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+:::
+
+# Setting Up GGIR
+
+## Installing and loading GGIR in R
+
+- Software requirements
+- Installing and loading the package
+
+
+## Preparing the data
+
+- Formatting the data
+- Organizing the files
+
+
+## Configuring the settings
+
+- Customizing the analysis
+- Setting the output directory
+
+
+## Activity: Hands-on session
+
+Set up GGIR with sample data
+
+
+# Processing Accelerometer Data with GGIR
+
+## Running the main GGIR function
+
+- Understanding the process flow
+- Interpreting the progress messages
+
+
+## Common issues and troubleshooting
+
+- Dealing with errors
+- Optimizing performance
+
+
+## Activity: Hands-on session
+
+Process sample accelerometer data
+
+
+# Interpreting the Output
+
+## Understanding the output files
+
+- Summary statistics
+- Sleep analysis
+- Physical activity analysis
+
+
+## Visualizing the data
+
+- Time-series plots
+- Summary plots
+
+
+## Activity: Group discussion
+
+Interpret the output from the hands-on session
+
+
+# Exploring Advanced Options in GGIR
+
+## Customizing sleep and physical activity metrics
+
+- Modifying detection thresholds
+- Adjusting epoch lengths
+
+
+## Working with multiple devices and data sources
+
+- Combining data from different accelerometers
+- Integrating external data sources
+
+
+## Activity: Hands-on session
+
+Explore advanced options with sample data
+
+
+# Wrap-up and Q&A
+
+## Recap of the workshop
+
+Brief summary of the workshop
+
+
+## Open discussion and Q&A
+
+Ask questions and share your thoughts

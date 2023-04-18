@@ -1,0 +1,287 @@
+---
+title: "R Basics"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction to R
+
+This R Markdown document provides an introduction to the basics of R programming and the tidyverse package. By the end of this tutorial, you should be able to understand the basic structure of an R script and use the tidyverse package for data manipulation and visualization.
+
+## R as a Calculator
+
+R can do anything a calculator can do. For example, we can add two numbers together:
+
+```{r}
+2 + 2
+```
+
+More complicated operations work too, using R's built in functions. For example, taking the log of a number, or finding the square root:
+
+```{r}
+# Log
+log(100)
+
+# Square root
+sqrt(100)
+```
+
+## Variables and Data Types
+
+In R, we can store values in variables. R has several basic data types, including numeric, character, and logical. We can create variables using the assignment operator, `<-`:
+
+```{r}
+# Numeric
+num_var <- 42
+
+# Character
+char_var <- "Hello, R!"
+
+# Logical
+log_var <- TRUE
+```
+
+(Notice when you run these that these variables now show up in the "Environment" pane in the upper right. This is where R stores all of the variables you've created.)
+
+Once a variable is stored, we can use it in calculations:
+
+```{r}
+2 * num_var
+```
+
+## Vectors
+
+A vector is a collection of elements of the same data type. You can create a vector using the `c()` function.
+
+```{r}
+# Numeric vector
+num_vec <- c(1, 2, 3, 4, 5)
+
+# Character vector
+char_vec <- c("apple", "banana", "cherry")
+
+# Logical vector
+log_vec <- c(TRUE, FALSE, TRUE)
+```
+
+Vectors make it possible to calculate summary statistics. For example, finding the mean or a largest value:
+
+```{r}
+# Mean
+mean(num_vec)
+
+# Max
+max(num_vec)
+```
+
+Here's a tricky question: what do you think happens if we add one to `num_vec`? What do you think `num_vec + 1` will return? What about other operations like `sqrt(num_var)`? (Try to answer before running the code.)
+
+```{r}
+num_vec + 1
+
+sqrt(num_vec)
+```
+
+Most base R functions will work on vectors, and will return a vector of the same length. This is called vectorization, and it's one of the most powerful features of R. If you have experience with other languages, this might catch you out. You generally don't need to write loops over vectors in R.
+
+## Data Frames
+
+A data frame is a two-dimensional data structure in which data is organized in rows and columns. You might see this called *tabular* data. Data frames are the most common data structure in R, and are used to store data for analysis and visualization. You can create a data frame using the `data.frame()` function.
+
+```{r}
+# Create a data frame
+my_data <- data.frame(
+  id = c(1, 2, 3),
+  name = c("Alice", "Bob", "Charlie"),
+  age = c(25, 30, 35)
+)
+
+# Calling the data frame will print it to the console
+my_data
+```
+
+You can access the columns of a data frame using the `$` operator. This is really just another vector.
+
+```{r}
+# Show the name column
+my_data$name
+```
+
+You can also access rows of a data frame using the `[]` operator. This will return a new data frame with the selected rows.
+
+```{r}
+# Grab the first row
+my_data[1, ]
+```
+
+# Introduction to the tidyverse
+
+The tidyverse is a collection of R packages designed for data science. It includes several packages for data manipulation, visualization, and modeling. You don't need the tidyverse to use R, but it is a great place to start because it provides a consistent set of tools. 
+
+To use the tidyverse, you need to install and load it.
+
+```{r}
+# Install the tidyverse package
+# install.packages("tidyverse")
+
+# Load the tidyverse package
+library(tidyverse)
+```
+
+## Tibbles
+
+Tibbles are similar to data frames, with a few added features. In particular, tibbles tend to look better when printed to the console. You can create a tibble using the `tibble()` function.
+
+```{r}
+# Create a tibble
+my_tibble <- tibble(
+  id = c(1, 2, 3),
+  name = c("Alice", "Bob", "Charlie"),
+  age = c(25, 30, 35)
+)
+
+# Show tibble on the console
+my_tibble
+```
+
+## Importing Data
+
+Of course, we don't normally just create data frames from scratch. Instead, we import data from other sources. The tidyverse includes several packages for importing data from different sources. For example, the readr package includes functions for reading data from CSV files.
+
+```{r}
+# Import a CSV file
+data <- read_csv("data/mock_data.csv")
+
+data
+```
+
+## Filter
+
+The `filter()` function allows you to filter rows based on conditions.
+
+```{r}
+# Filter rows where age is greater than 10
+filter(data, age > 10)
+```
+
+## Select
+The `select()` function allows you to choose specific columns from a data frame.
+
+```{r}
+# Select the 'sex' and 'age' columns
+select(data, sex, age)
+```
+
+## Piping
+
+The pipe operator, `%>%`, allows you to chain together multiple operations. This is a powerful feature of the tidyverse, and is a great way to make your code more readable.
+
+```{r}
+data %>%
+  filter(age > 10) %>%
+  select(sex, age)
+```
+
+## Mutate
+
+The `mutate` function allows you to add new columns, or modify existing ones.
+
+```{r}
+# Add a new column 'age_group'
+mutated_data <- data %>%
+  mutate(age_group = ifelse(age <= 10, "Young", "Old"))
+
+mutated_data
+```
+
+## Group By and Summarize
+
+The `group_by()` and `summarize()` functions allow you to group data by a variable and compute summary statistics.
+
+```{r}
+# Calculate the average age for each gender
+grouped_data <- data %>%
+  group_by(sex) %>%
+  summarize(avg_age = mean(age))
+
+grouped_data
+```
+
+# Data Visualisation with ggplot2
+
+ggplot2 is a powerful package in the tidyverse for creating data visualisations. Plotting is, I think, one of the trickiest parts of any programming language, and can take a bit of practice. But once you get the hang of it, ggplot2 is a great tool for creating publication-quality visualisations.
+
+## Scatter Plots
+
+To create a plot, you need to define the data, aesthetics (e.g., x and y axis), and the type of plot (e.g., scatterplot, bar plot).
+
+```{r}
+# Create a scatterplot of age by bmi
+scatter_plot <-
+  ggplot(data, aes(x = age, y = bmi)) +
+  geom_point()
+scatter_plot
+```
+
+One thing to notice here is that above we were using the pipe (`%>%`) to chain operations together. But in ggplot you are 'adding' layers on top of each other, so it uses the `+` operator instead.
+
+## Customizing Plots
+
+You can customize plots by adding labels, changing colors, and modifying themes.
+
+```{r}
+# Customize the scatterplot
+customized_plot <- scatter_plot +
+  labs(
+    title = "Scatterplot of BMI by Age",
+    x = "Age",
+    y = "BMI"
+  ) +
+  theme_minimal() +
+  geom_point(color = "blue", size = 3)
+customized_plot
+```
+
+## Faceting
+
+Faceting allows you to create multiple plots based on a variable.
+
+```{r}
+# Create a scatterplot of bmi by age, facetted by sex
+facet_plot <- ggplot(data, aes(x = age, y = bmi)) +
+  geom_point() +
+  facet_wrap(~sex)
+facet_plot
+```
+
+## Built In Plots
+
+R also has built in plots. These are not normally good enough for publication, or as easy to customise, but they do give you a quick way to look at your data.
+
+```{r}
+hist(data$bmi)
+```
+
+## Modelling
+
+The `lm()` function will fit a linear model to your data.
+
+```{r}
+model <- lm(bmi ~ age + sex, data = data)
+summary(model)
+```
+
+The tidyverse also has some functions for tidying model outputs, such as `broom::tidy()` and `broom::glance()`.
+
+```{r}
+# Broom does not come with the tidyverse, so you need to install it separately
+# install.packages("broom")
+# tidy() shows the coefficients
+broom::tidy(model)
+
+# glance() shows model info
+broom::glance(model)
+```

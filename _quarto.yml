@@ -1,5 +1,7 @@
 project:
   type: website
+  render:
+    - "*.qmd"
 
 website:
   title: "Accelerometer Processing Workshop"
@@ -29,3 +31,7 @@ format:
   revealjs: 
     theme: simple
     incremental: true
+    preview-links: true
+    logo: "https://forms.acu.edu.au/__data/assets/file/0020/2330642/ACU_MASTERBRAND_POS_RGB.svg"
+    footer: motivation-and-behaviour.github.io/accel-processing-workshop
+

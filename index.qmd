@@ -3,6 +3,52 @@ title: "Accelerometer Processing Workshop"
 format: html
 ---
 
-This is a Quarto website.
+## Workshop Background
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+In this workshop, we'll cover the how and why of processing accelerometer data using open-source tools.
+Specifically, we'll focus on the popular [`GGIR`](https://cran.r-project.org/web/packages/GGIR/index.html) package.
+
+### Agenda
+
+We will cover:
+
+* The advantages (and some disadvantages) of using open-source processing methods
+* The basics of using R
+* Installing and running `GGIR`
+* Understanding the settings and options
+* Interpreting the output
+* Common issues and troubleshooting steps
+* Advanced options (e.g., day segment analysis)
+
+## Getting Setup
+
+To particpate in the workshop, you'll need three things:
+
+1. R installed on your machine
+2. RStudio (or another IDE like VS Code, if you prefer)
+3. The example files and scripts
+
+### Install R
+
+We'll be using Version 4.2.x for this workshop, but it should work for versions greater than 4.
+If you're running an older version of R, now is a great time to upgrade.
+
+To install R, navigate head to [CRAN](https://cran.r-project.org/) and follow the instructions to install the version that matches your operating system.
+
+### Install RStudio
+
+RStudio is an Integrated Development Environment (IDE) - a way to interact with programming languages.
+RStudio is specifically designed with R in mind, so it's a great place to start if you have never used R before.
+
+You can install RStudio from [here](https://posit.co/download/rstudio-desktop/).
+Again, just follow the install steps they provide to get started.
+
+### Download Workshop Files
+
+I've provided some example data files and scripts to use during the workshop.
+To download these: 
+
+1. Head to the [GitHub Repository](https://github.com/Motivation-and-Behaviour/accel-processing-workshop)
+2. Click `Code` then `Download ZIP`  
+![](imgs/Download_Examples.png){fig-alt="Screenshot of GitHub Repo download button"}
+3. Unzip the files. You will only need the `Workshop Files` folder.
