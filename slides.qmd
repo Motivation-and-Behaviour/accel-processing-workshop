@@ -34,8 +34,6 @@ Please go to [bit.ly/GGIRWorkshop](https://bit.ly/GGIRWorkshop) and follow the *
 * Have a basic understanding of R
 * Understand how to process accelerometer data with GGIR, and interpret the output
 
-. . .
-
 ### Agenda
 
 * The advantages (and some disadvantages) of using open-source processing methods
@@ -50,26 +48,21 @@ Please go to [bit.ly/GGIRWorkshop](https://bit.ly/GGIRWorkshop) and follow the *
 
 ## Basics of accelerometer data
 
-- What is accelerometer data?
-- Common use cases
+![](imgs/Accel_Plot.png)
 
 ## Limitations of proprietary methods
 
-- Lack of customization
-- Limited transparency
-- Vendor lock-in
-
+* Limited transparency
+* Limited scalability
+* Limited extensability
+* Vendor lock-in
 
 ## Benefits of using GGIR
 
-- Open-source nature
-- Customizability
-- Comprehensive analysis tools
-
-
-## Activity: Group discussion
-
-Share your experiences with accelerometer data and proprietary methods
+* Multi-device
+* New and expanding features
+* Open-source nature
+* Scalable and extensible
 
 # A (Very) Quick Intro to R {background="#3C1053"}
 
@@ -81,7 +74,7 @@ Share your experiences with accelerometer data and proprietary methods
 
 ---
 
-### An example
+## An example
 
 Fitting a simple linear model:
 
@@ -135,7 +128,7 @@ model = sm.OLS(y, x).fit()
 
 ::::
 
-## R Resources
+## R Resources {.smaller}
 
 ### R for Data Science
 
@@ -150,32 +143,30 @@ model = sm.OLS(y, x).fit()
 * [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
 :::
 
-# Setting Up GGIR
+# Activity: Intro to R {background="#3C1053"}
 
-## Installing and loading GGIR in R
+# Processing Accelerometer Data with GGIR  {background="#3C1053"}
 
-- Software requirements
-- Installing and loading the package
+## Understanding what GGIR is doing
 
+---
 
-## Preparing the data
+![](imgs/jmpb_fig1_full.jpg)
 
-- Formatting the data
-- Organizing the files
+---
 
+::: {.r-stack}
 
-## Configuring the settings
+![](imgs/jmpb_fig1_p1.png){.fragment .fade-in-then-out}
 
-- Customizing the analysis
-- Setting the output directory
+![](imgs/jmpb_fig1_p2.png){.fragment .fade-up}
 
+![](imgs/jmpb_fig1_p3.png){.fragment .fade-up}
 
-## Activity: Hands-on session
+![](imgs/jmpb_fig1_p4.png){.fragment .fade-up}
 
-Set up GGIR with sample data
-
-
-# Processing Accelerometer Data with GGIR
+![](imgs/jmpb_fig1_p5.png){.fragment .fade-up}
+:::
 
 ## Running the main GGIR function
 
