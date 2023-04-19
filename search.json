@@ -46,35 +46,28 @@
     "href": "slides.html#overview-of-the-workshop",
     "title": "Workshop Slides",
     "section": "Overview of the workshop",
-    "text": "Overview of the workshop\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\n. . .\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
+    "text": "Overview of the workshop\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
   },
   {
     "objectID": "slides.html#basics-of-accelerometer-data",
     "href": "slides.html#basics-of-accelerometer-data",
     "title": "Workshop Slides",
     "section": "Basics of accelerometer data",
-    "text": "Basics of accelerometer data\n\nWhat is accelerometer data?\nCommon use cases"
+    "text": "Basics of accelerometer data"
   },
   {
     "objectID": "slides.html#limitations-of-proprietary-methods",
     "href": "slides.html#limitations-of-proprietary-methods",
     "title": "Workshop Slides",
     "section": "Limitations of proprietary methods",
-    "text": "Limitations of proprietary methods\n\nLack of customization\nLimited transparency\nVendor lock-in"
+    "text": "Limitations of proprietary methods\n\nLimited transparency\nLimited scalability\nLimited extensability\nVendor lock-in"
   },
   {
     "objectID": "slides.html#benefits-of-using-ggir",
     "href": "slides.html#benefits-of-using-ggir",
     "title": "Workshop Slides",
     "section": "Benefits of using GGIR",
-    "text": "Benefits of using GGIR\n\nOpen-source nature\nCustomizability\nComprehensive analysis tools"
-  },
-  {
-    "objectID": "slides.html#activity-group-discussion",
-    "href": "slides.html#activity-group-discussion",
-    "title": "Workshop Slides",
-    "section": "Activity: Group discussion",
-    "text": "Activity: Group discussion\nShare your experiences with accelerometer data and proprietary methods"
+    "text": "Benefits of using GGIR\n\nMulti-device\nNew and expanding features\nOpen-source nature\nScalable and extensible"
   },
   {
     "objectID": "slides.html#what-is-r",
@@ -82,6 +75,13 @@
     "title": "Workshop Slides",
     "section": "What is R?",
     "text": "What is R?\n\nR is a free, open-source programming language\nSpecially designed for data analysis and statistics\nWidely used in research, data science, and industry"
+  },
+  {
+    "objectID": "slides.html#an-example",
+    "href": "slides.html#an-example",
+    "title": "Workshop Slides",
+    "section": "An example",
+    "text": "An example\nFitting a simple linear model:\n\\[\\hat{y} = \\beta_0 + \\beta_1x\\]\n\nR Code\n\n# Fit a linear model\nlm(y ~ x)\n\n\n\nPython Code\n# Import packages\nimport numpy as np\nimport statsmodels.api as sm\n\n# Add a constant term to x (statsmodels doesn't add one by default)\nx = sm.add_constant(x)\n\n# Fit the linear model\nmodel = sm.OLS(y, x).fit()"
   },
   {
     "objectID": "slides.html#why-use-r",
@@ -98,32 +98,11 @@
     "text": "R Resources\nR for Data Science\nr4ds.had.co.nz\nSoftware Carpentry\nswcarpentry.github.io\n\n\nProgramming with R\nR for Reproducible Scientific Analysis"
   },
   {
-    "objectID": "slides.html#installing-and-loading-ggir-in-r",
-    "href": "slides.html#installing-and-loading-ggir-in-r",
+    "objectID": "slides.html#understanding-what-ggir-is-doing",
+    "href": "slides.html#understanding-what-ggir-is-doing",
     "title": "Workshop Slides",
-    "section": "Installing and loading GGIR in R",
-    "text": "Installing and loading GGIR in R\n\nSoftware requirements\nInstalling and loading the package"
-  },
-  {
-    "objectID": "slides.html#preparing-the-data",
-    "href": "slides.html#preparing-the-data",
-    "title": "Workshop Slides",
-    "section": "Preparing the data",
-    "text": "Preparing the data\n\nFormatting the data\nOrganizing the files"
-  },
-  {
-    "objectID": "slides.html#configuring-the-settings",
-    "href": "slides.html#configuring-the-settings",
-    "title": "Workshop Slides",
-    "section": "Configuring the settings",
-    "text": "Configuring the settings\n\nCustomizing the analysis\nSetting the output directory"
-  },
-  {
-    "objectID": "slides.html#activity-hands-on-session",
-    "href": "slides.html#activity-hands-on-session",
-    "title": "Workshop Slides",
-    "section": "Activity: Hands-on session",
-    "text": "Activity: Hands-on session\nSet up GGIR with sample data"
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing"
   },
   {
     "objectID": "slides.html#running-the-main-ggir-function",
@@ -140,8 +119,8 @@
     "text": "Common issues and troubleshooting\n\nDealing with errors\nOptimizing performance"
   },
   {
-    "objectID": "slides.html#activity-hands-on-session-1",
-    "href": "slides.html#activity-hands-on-session-1",
+    "objectID": "slides.html#activity-hands-on-session",
+    "href": "slides.html#activity-hands-on-session",
     "title": "Workshop Slides",
     "section": "Activity: Hands-on session",
     "text": "Activity: Hands-on session\nProcess sample accelerometer data"
@@ -161,8 +140,8 @@
     "text": "Visualizing the data\n\nTime-series plots\nSummary plots"
   },
   {
-    "objectID": "slides.html#activity-group-discussion-1",
-    "href": "slides.html#activity-group-discussion-1",
+    "objectID": "slides.html#activity-group-discussion",
+    "href": "slides.html#activity-group-discussion",
     "title": "Workshop Slides",
     "section": "Activity: Group discussion",
     "text": "Activity: Group discussion\nInterpret the output from the hands-on session"
@@ -182,8 +161,8 @@
     "text": "Working with multiple devices and data sources\n\nCombining data from different accelerometers\nIntegrating external data sources"
   },
   {
-    "objectID": "slides.html#activity-hands-on-session-2",
-    "href": "slides.html#activity-hands-on-session-2",
+    "objectID": "slides.html#activity-hands-on-session-1",
+    "href": "slides.html#activity-hands-on-session-1",
     "title": "Workshop Slides",
     "section": "Activity: Hands-on session",
     "text": "Activity: Hands-on session\nExplore advanced options with sample data"

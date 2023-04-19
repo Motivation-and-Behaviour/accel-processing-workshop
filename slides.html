@@ -433,7 +433,6 @@ Dr Taren Sanders
 <li class="fragment">Have a basic understanding of R</li>
 <li class="fragment">Understand how to process accelerometer data with GGIR, and interpret the output</li>
 </ul>
-<p>. . .</p>
 <h3 id="agenda">Agenda</h3>
 <ul>
 <li class="fragment">The advantages (and some disadvantages) of using open-source processing methods</li>
@@ -452,30 +451,25 @@ Dr Taren Sanders
 </section>
 <section id="basics-of-accelerometer-data" class="slide level2">
 <h2>Basics of accelerometer data</h2>
-<ul>
-<li class="fragment">What is accelerometer data?</li>
-<li class="fragment">Common use cases</li>
-</ul>
-</section>
+
+<img data-src="imgs/Accel_Plot.png" class="r-stretch"></section>
 <section id="limitations-of-proprietary-methods" class="slide level2">
 <h2>Limitations of proprietary methods</h2>
 <ul>
-<li class="fragment">Lack of customization</li>
 <li class="fragment">Limited transparency</li>
+<li class="fragment">Limited scalability</li>
+<li class="fragment">Limited extensability</li>
 <li class="fragment">Vendor lock-in</li>
 </ul>
 </section>
 <section id="benefits-of-using-ggir" class="slide level2">
 <h2>Benefits of using GGIR</h2>
 <ul>
+<li class="fragment">Multi-device</li>
+<li class="fragment">New and expanding features</li>
 <li class="fragment">Open-source nature</li>
-<li class="fragment">Customizability</li>
-<li class="fragment">Comprehensive analysis tools</li>
+<li class="fragment">Scalable and extensible</li>
 </ul>
-</section>
-<section id="activity-group-discussion" class="slide level2">
-<h2>Activity: Group discussion</h2>
-<p>Share your experiences with accelerometer data and proprietary methods</p>
 </section></section>
 <section>
 <section id="a-very-quick-intro-to-r" class="title-slide slide level1 center" data-background="#3C1053">
@@ -490,18 +484,18 @@ Dr Taren Sanders
 <li class="fragment">Widely used in research, data science, and industry</li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h3 id="an-example">An example</h3>
+<section id="an-example" class="slide level2">
+<h2>An example</h2>
 <p>Fitting a simple linear model:</p>
 <p><span class="math display">\[\hat{y} = \beta_0 + \beta_1x\]</span></p>
-<p>. . .</p>
+<div class="fragment">
 <p><strong>R Code</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Fit a linear model</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">lm</span>(y <span class="sc">~</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>. . .</p>
+</div>
+<div class="fragment">
 <p><strong>Python Code</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Import packages</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -512,6 +506,7 @@ Dr Taren Sanders
 <span id="cb2-7"><a href="#cb2-7"></a></span>
 <span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Fit the linear model</span></span>
 <span id="cb2-9"><a href="#cb2-9"></a>model <span class="op">=</span> sm.OLS(y, x).fit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="why-use-r" class="slide level2">
 <h2>Why use R?</h2>
@@ -532,7 +527,7 @@ Dr Taren Sanders
 </div>
 </div>
 </section>
-<section id="r-resources" class="slide level2">
+<section id="r-resources" class="slide level2 smaller">
 <h2>R Resources</h2>
 <h3 id="r-for-data-science">R for Data Science</h3>
 <p><a href="https://r4ds.had.co.nz/">r4ds.had.co.nz</a></p>
@@ -545,40 +540,32 @@ Dr Taren Sanders
 </ul>
 </div>
 </section></section>
-<section>
-<section id="setting-up-ggir" class="title-slide slide level1 center">
-<h1>Setting Up GGIR</h1>
+<section id="activity-intro-to-r" class="title-slide slide level1 center" data-background="#3C1053">
+<h1>Activity: Intro to R</h1>
 
 </section>
-<section id="installing-and-loading-ggir-in-r" class="slide level2">
-<h2>Installing and loading GGIR in R</h2>
-<ul>
-<li class="fragment">Software requirements</li>
-<li class="fragment">Installing and loading the package</li>
-</ul>
-</section>
-<section id="preparing-the-data" class="slide level2">
-<h2>Preparing the data</h2>
-<ul>
-<li class="fragment">Formatting the data</li>
-<li class="fragment">Organizing the files</li>
-</ul>
-</section>
-<section id="configuring-the-settings" class="slide level2">
-<h2>Configuring the settings</h2>
-<ul>
-<li class="fragment">Customizing the analysis</li>
-<li class="fragment">Setting the output directory</li>
-</ul>
-</section>
-<section id="activity-hands-on-session" class="slide level2">
-<h2>Activity: Hands-on session</h2>
-<p>Set up GGIR with sample data</p>
-</section></section>
+
 <section>
-<section id="processing-accelerometer-data-with-ggir" class="title-slide slide level1 center">
+<section id="processing-accelerometer-data-with-ggir" class="title-slide slide level1 center" data-background="#3C1053">
 <h1>Processing Accelerometer Data with GGIR</h1>
 
+</section>
+<section id="understanding-what-ggir-is-doing" class="slide level2">
+<h2>Understanding what GGIR is doing</h2>
+</section>
+<section class="slide level2">
+
+
+<img data-src="imgs/jmpb_fig1_full.jpg" class="r-stretch"></section>
+<section class="slide level2">
+
+<div class="r-stack">
+<p><img data-src="imgs/jmpb_fig1_p1.png" class="fragment fade-in-then-out"></p>
+<p><img data-src="imgs/jmpb_fig1_p2.png" class="fragment fade-up"></p>
+<p><img data-src="imgs/jmpb_fig1_p3.png" class="fragment fade-up"></p>
+<p><img data-src="imgs/jmpb_fig1_p4.png" class="fragment fade-up"></p>
+<p><img data-src="imgs/jmpb_fig1_p5.png" class="fragment fade-up"></p>
+</div>
 </section>
 <section id="running-the-main-ggir-function" class="slide level2">
 <h2>Running the main GGIR function</h2>
@@ -594,7 +581,7 @@ Dr Taren Sanders
 <li class="fragment">Optimizing performance</li>
 </ul>
 </section>
-<section id="activity-hands-on-session-1" class="slide level2">
+<section id="activity-hands-on-session" class="slide level2">
 <h2>Activity: Hands-on session</h2>
 <p>Process sample accelerometer data</p>
 </section></section>
@@ -618,7 +605,7 @@ Dr Taren Sanders
 <li class="fragment">Summary plots</li>
 </ul>
 </section>
-<section id="activity-group-discussion-1" class="slide level2">
+<section id="activity-group-discussion" class="slide level2">
 <h2>Activity: Group discussion</h2>
 <p>Interpret the output from the hands-on session</p>
 </section></section>
@@ -641,7 +628,7 @@ Dr Taren Sanders
 <li class="fragment">Integrating external data sources</li>
 </ul>
 </section>
-<section id="activity-hands-on-session-2" class="slide level2">
+<section id="activity-hands-on-session-1" class="slide level2">
 <h2>Activity: Hands-on session</h2>
 <p>Explore advanced options with sample data</p>
 </section></section>
