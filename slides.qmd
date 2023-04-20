@@ -3,7 +3,7 @@ title: "Workshop Slides"
 date: "2023-04-21"
 date-format: "DD MMMM YYYY"
 format: 
-  #html: default
+  html: default
   revealjs: 
     output-file: slides-revealjs.html
 echo: true
