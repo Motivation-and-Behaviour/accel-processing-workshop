@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/Motivation-and-Behaviour/accel-processing-workshop/index.html</loc>
-    <lastmod>2023-04-20T13:52:39.548Z</lastmod>
+    <lastmod>2023-04-20T13:57:06.916Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/Motivation-and-Behaviour/accel-processing-workshop/slides-revealjs.html</loc>
-    <lastmod>2023-04-20T13:52:42.648Z</lastmod>
+    <lastmod>2023-04-20T13:57:13.388Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/Motivation-and-Behaviour/accel-processing-workshop/slides.html</loc>
+    <lastmod>2023-04-20T13:57:13.520Z</lastmod>
   </url>
 </urlset>

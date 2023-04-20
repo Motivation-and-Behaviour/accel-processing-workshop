@@ -292,5 +292,278 @@
     "title": "Workshop Slides",
     "section": "Contact Details",
     "text": "Contact Details\nDr Taren Sanders\nInstitute for Positive Psychology and Education, Australian Catholic University\nTaren.Sanders@acu.edu.au\n\n\n\nmotivation-and-behaviour.github.io/accel-processing-workshop"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Workshop Slides",
+    "section": "",
+    "text": "Please go to\nbit.ly/GGIRWorkshop\nand follow the Getting Started instructions."
+  },
+  {
+    "objectID": "slides.html#before-we-start",
+    "href": "slides.html#before-we-start",
+    "title": "Workshop Slides",
+    "section": "",
+    "text": "Please go to\nbit.ly/GGIRWorkshop\nand follow the Getting Started instructions."
+  },
+  {
+    "objectID": "slides.html#why-me",
+    "href": "slides.html#why-me",
+    "title": "Workshop Slides",
+    "section": "Why Me?",
+    "text": "Why Me?\n\nMore than a decade working with accelerometers\nProjects with &gt;25k accelerometers\nContributed code to GGIR\n\nDeveloped packages for distributed processing"
+  },
+  {
+    "objectID": "slides.html#overview-of-the-workshop",
+    "href": "slides.html#overview-of-the-workshop",
+    "title": "Workshop Slides",
+    "section": "Overview of the workshop",
+    "text": "Overview of the workshop\n\nObjectives\n\nUnderstand why open-source methods matter\nHave a basic understanding of R\nUnderstand how to process accelerometer data with GGIR, and interpret the output\n\n\n\nAgenda\n\nThe advantages (and some disadvantages) of using open-source processing methods\nThe basics of using R\nInstalling and running GGIR\nUnderstanding the settings and options\nInterpreting the output\nCommon issues and troubleshooting steps\nAdvanced options (e.g., day segment analysis)"
+  },
+  {
+    "objectID": "slides.html#basics-of-accelerometer-data",
+    "href": "slides.html#basics-of-accelerometer-data",
+    "title": "Workshop Slides",
+    "section": "Basics of accelerometer data",
+    "text": "Basics of accelerometer data"
+  },
+  {
+    "objectID": "slides.html#limitations-of-proprietary-methods",
+    "href": "slides.html#limitations-of-proprietary-methods",
+    "title": "Workshop Slides",
+    "section": "Limitations of proprietary methods",
+    "text": "Limitations of proprietary methods\n\nLimited transparency\nLimited scalability\nLimited extensability\nVendor lock-in"
+  },
+  {
+    "objectID": "slides.html#why-ggir",
+    "href": "slides.html#why-ggir",
+    "title": "Workshop Slides",
+    "section": "Why GGIR?",
+    "text": "Why GGIR?\n\nMulti-device\nNew and expanding features\nOpen-source nature\nScalable and extensible"
+  },
+  {
+    "objectID": "slides.html#what-do-we-really-want-to-know",
+    "href": "slides.html#what-do-we-really-want-to-know",
+    "title": "Workshop Slides",
+    "section": "What do we really want to know?",
+    "text": "What do we really want to know?\n\nHow much? (Volume)\nHow hard? (Intensity)"
+  },
+  {
+    "objectID": "slides.html#physical-activity-metrics",
+    "href": "slides.html#physical-activity-metrics",
+    "title": "Workshop Slides",
+    "section": "Physical activity metrics",
+    "text": "Physical activity metrics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoi: 10.1136/bjsports-2020-103604"
+  },
+  {
+    "objectID": "slides.html#newer-physical-activity-metrics",
+    "href": "slides.html#newer-physical-activity-metrics",
+    "title": "Workshop Slides",
+    "section": "New(er) physical activity metrics",
+    "text": "New(er) physical activity metrics\n\nMX Metrics\n\n\n\nRowlands, 2018\n\n\n\ndoi: 10.1186/s40798-019-0225-9\n\n\nRemember that we are measuring accelerations, and translating these to physical activity. By focusing on the actual accelerations, we avoid the translation errors."
+  },
+  {
+    "objectID": "slides.html#newer-physical-activity-metrics-1",
+    "href": "slides.html#newer-physical-activity-metrics-1",
+    "title": "Workshop Slides",
+    "section": "New(er) physical activity metrics",
+    "text": "New(er) physical activity metrics\n\nIntensity Gradient\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoi: 10.1123/pes.2018-0201"
+  },
+  {
+    "objectID": "slides.html#newer-physical-activity-metrics-2",
+    "href": "slides.html#newer-physical-activity-metrics-2",
+    "title": "Workshop Slides",
+    "section": "New(er) physical activity metrics",
+    "text": "New(er) physical activity metrics\n\nIntensity Gradient\n\n\n\n\n\n\n\n\n\n\n\n\n\ndoi: 10.1249/MSS.0000000000001561"
+  },
+  {
+    "objectID": "slides.html#why-ggir-1",
+    "href": "slides.html#why-ggir-1",
+    "title": "Workshop Slides",
+    "section": "Why GGIR?",
+    "text": "Why GGIR?\nCalculate all of these metrics at once"
+  },
+  {
+    "objectID": "slides.html#what-is-r",
+    "href": "slides.html#what-is-r",
+    "title": "Workshop Slides",
+    "section": "What is R?",
+    "text": "What is R?\n\nR is a free, open-source programming language\nSpecially designed for data analysis and statistics\nWidely used in research, data science, and industry"
+  },
+  {
+    "objectID": "slides.html#an-example",
+    "href": "slides.html#an-example",
+    "title": "Workshop Slides",
+    "section": "An example",
+    "text": "An example\nFitting a simple linear model:\n\\[\\hat{y} = \\beta_0 + \\beta_1x\\]\n. . .\nR Code\n\n# Fit a linear model\nlm(y ~ x)\n\n. . .\nPython Code\n# Import packages\nimport numpy as np\nimport statsmodels.api as sm\n\n# Add a constant term to x (statsmodels doesn't add one by default)\nx = sm.add_constant(x)\n\n# Fit the linear model\nmodel = sm.OLS(y, x).fit()"
+  },
+  {
+    "objectID": "slides.html#why-use-r",
+    "href": "slides.html#why-use-r",
+    "title": "Workshop Slides",
+    "section": "Why use R?",
+    "text": "Why use R?\n\n\n\nPros\n\nFree\nReproducible\nExtensive set of add-on tools and packages\nTypeset as you go\n\n\n\n\nCons\n\nSteeper learning curve than point-and-click interfaces"
+  },
+  {
+    "objectID": "slides.html#r-resources",
+    "href": "slides.html#r-resources",
+    "title": "Workshop Slides",
+    "section": "R Resources",
+    "text": "R Resources\n\nR for Data Science\nr4ds.had.co.nz\n\n\nSoftware Carpentry\nswcarpentry.github.io\n\n\nProgramming with R\nR for Reproducible Scientific Analysis"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing",
+    "href": "slides.html#understanding-what-ggir-is-doing",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\n\n\n\nFigure from Migueles et al., 2019 (10.1123/jmpb.2018-0063)"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-1",
+    "href": "slides.html#understanding-what-ggir-is-doing-1",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-2",
+    "href": "slides.html#understanding-what-ggir-is-doing-2",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\nPart 1\n\nPre-processing steps\nAcceleration metrics (data collapsed)\nNon-wear detection and imputation\nLongest time to complete"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-3",
+    "href": "slides.html#understanding-what-ggir-is-doing-3",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\nPart 2\n\nData imputation\nPhysical activity calculation\nOutput: Part 2 reports, data quality plots"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-4",
+    "href": "slides.html#understanding-what-ggir-is-doing-4",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\nPart 3\n\nDetection of sustained inactivity\nEstimate start/end period of sleep window"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-5",
+    "href": "slides.html#understanding-what-ggir-is-doing-5",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\nPart 4\n\nConvert detected inactivity in sleep window to sleep\nOr use sleep diary for sleep window\nOutput: Part 4 reports"
+  },
+  {
+    "objectID": "slides.html#understanding-what-ggir-is-doing-6",
+    "href": "slides.html#understanding-what-ggir-is-doing-6",
+    "title": "Workshop Slides",
+    "section": "Understanding what GGIR is doing",
+    "text": "Understanding what GGIR is doing\n\n\n\nPart 5\n\nCollate data from Part 2 and Part 4 for final report\nOutput: Part 5 reports"
+  },
+  {
+    "objectID": "slides.html#running-the-main-ggir-function",
+    "href": "slides.html#running-the-main-ggir-function",
+    "title": "Workshop Slides",
+    "section": "Running the main GGIR function",
+    "text": "Running the main GGIR function\n\nAll options\n\nGGIR(\n  mode,\n  datadir,\n  f0,\n  f1,\n  windowsizes,\n  desiredtz,\n  overwrite,\n  do.parallel,\n  maxNcores,\n  myfun,\n  outputdir,\n  studyname,\n  chunksize,\n  do.enmo,\n  do.lfenmo,\n  do.en,\n  do.bfen,\n  do.hfen,\n  do.hfenplus,\n  do.mad,\n  do.anglex,\n  do.angley,\n  do.angle,\n  do.enmoa,\n  do.roll_med_acc_x,\n  do.roll_med_acc_y,\n  do.roll_med_acc_z,\n  do.dev_roll_med_acc_x,\n  do.dev_roll_med_acc_y,\n  do.dev_roll_med_acc_z,\n  do.lfen,\n  do.lfx,\n  do.lfy,\n  do.lfz,\n  do.hfx,\n  do.hfy,\n  do.hfz,\n  do.bfx,\n  do.bfy,\n  do.bfz,\n  do.zcx,\n  do.zcy,\n  do.zcz,\n  lb,\n  hb,\n  n,\n  do.cal,\n  spherecrit,\n  minloadcrit,\n  printsummary,\n  print.filename,\n  backup.cal.coef,\n  rmc.noise,\n  rmc.dec,\n  rmc.firstrow.acc,\n  rmc.firstrow.header,\n  rmc.col.acc,\n  rmc.col.temp,\n  rmc.col.time,\n  rmc.unit.acc,\n  rmc.unit.temp,\n  rmc.origin,\n  rmc.header.length,\n  mc.format.time,\n  rmc.bitrate,\n  rmc.dynamic_range,\n  rmc.unsignedbit,\n  rmc.desiredtz,\n  rmc.sf,\n  rmc.headername.sf,\n  rmc.headername.sn,\n  rmc.headername.recordingid,\n  rmc.header.structure,\n  rmc.check4timegaps,\n  rmc.col.wear,\n  rmc.doresample,\n  imputeTimegaps,\n  selectdaysfile,\n  dayborder,\n  dynrange,\n  configtz,\n  minimumFileSizeMB,\n  interpolationType,\n  expand_tail_max_hours,\n  metadatadir,\n  minimum_MM_length.part5,\n  strategy,\n  hrs.del.start,\n  hrs.del.end,\n  maxdur,\n  max_calendar_days,\n  includedaycrit,\n  L5M5window,\n  M5L5res,\n  winhr,\n  qwindow,\n  qlevels,\n  ilevels,\n  mvpathreshold,\n  boutcriter,\n  ndayswindow,\n  idloc,\n  do.imp,\n  storefolderstructure,\n  epochvalues2csv,\n  do.part2.pdf,\n  mvpadur,\n  window.summary.size,\n  bout.metric,\n  closedbout,\n  IVIS_windowsize_minutes,\n  IVIS_epochsize_seconds,\n  IVIS.activity.metric,\n  iglevels,\n  TimeSegments2ZeroFile,\n  qM5L5,\n  MX.ig.min.dur,\n  qwindow_dateformat,\n  anglethreshold,\n  timethreshold,\n  acc.metric,\n  ignorenonwear,\n  constrain2range,\n  do.part3.pdf,\n  sensor.location,\n  HASPT.algo,\n  HASIB.algo,\n  Sadeh_axis,\n  longitudinal_axis,\n  HASPT.ignore.invalid,\n  loglocation,\n  colid,\n  coln1,\n  nnights,\n  sleeplogidnum,\n  do.visual,\n  outliers.only,\n  excludefirstlast,\n  criterror,\n  includenightcrit,\n  relyonguider,\n  relyonsleeplog,\n  def.noc.sleep,\n  data_cleaning_file,\n  excludefirst.part4,\n  excludelast.part4,\n  sleeplogsep,\n  sleepwindowType,\n  excludefirstlast.part5,\n  boutcriter.mvpa,\n  boutcriter.in,\n  boutcriter.lig,\n  threshold.lig,\n  threshold.mod,\n  threshold.vig,\n  timewindow,\n  boutdur.mvpa,\n  boutdur.in,\n  boutdur.lig,\n  save_ms5rawlevels,\n  part5_agg2_60seconds,\n  save_ms5raw_format,\n  save_ms5raw_without_invalid,\n  includedaycrit.part5,\n  frag.metrics,\n  LUXthresholds,\n  LUX_cal_constant,\n  LUX_cal_exponent,\n  LUX_day_segments,\n  do.sibreport\n)"
+  },
+  {
+    "objectID": "slides.html#running-the-main-ggir-function-1",
+    "href": "slides.html#running-the-main-ggir-function-1",
+    "title": "Workshop Slides",
+    "section": "Running the main GGIR function",
+    "text": "Running the main GGIR function\n\nMinimum options\n\nGGIR(\n  datadir,\n  outputdir\n)"
+  },
+  {
+    "objectID": "slides.html#running-the-main-ggir-function-2",
+    "href": "slides.html#running-the-main-ggir-function-2",
+    "title": "Workshop Slides",
+    "section": "Running the main GGIR function",
+    "text": "Running the main GGIR function\n\nGood starting place\n\nGGIR(\n  mode = c(1, 2, 3, 4, 5),\n  datadir = \"C:/mystudy/mydata\",\n  outputdir = \"D:/myresults\",\n  # =====================\n  # Part 2\n  # =====================\n  idloc = 2,\n  strategy = 2,\n  maxdur = 9,\n  includedaycrit = 16,\n  qwindow = c(0, 24),\n  qlevels = c(\n    960 / 1440,   # Top 8 hours\n    1320 / 1440,  # Top 120min\n    1380 / 1440,  # Top 60min\n    1410 / 1440,  # Top 30min\n    1425 / 1440,  # Top 15min\n    1435 / 1440), # Top 5min\n  ilevels = seq(0, 4000, 50),\n  iglevels = 1,\n  mvpathreshold = c(100),\n  mvpadur = c(1, 5, 10),\n  boutcriter = 0.8,\n  # =====================\n  # Part 3 + 4\n  # =====================\n  def.noc.sleep = 1,\n  excludefirstlast = FALSE,\n  includenightcrit = 16,\n  # =====================\n  # Part 5\n  # =====================\n  threshold.lig = c(30), threshold.mod = c(100), threshold.vig = c(400),\n  boutcriter.in = 0.9, boutcriter.lig = 0.8, boutcriter.mvpa = 0.8,\n  boutdur.in = c(1, 10, 30), boutdur.lig = c(1, 10), boutdur.mvpa = c(1),\n  includedaycrit.part5 = 16,\n  timewindow = c(\"MM\", \"WW\"),\n  # =====================\n  # Reports\n  # =====================\n  visualreport = TRUE,\n  do.report = c(2, 4, 5)\n)\n\n\nidloc = how to extract the ID number\nstrategy = how study was setup. 2 means use data between first and last midnight. You can also use strategies based on cutting off hours at the start or end, the most active days, or just everything after the first midnight.\nmaxdur = max number of days accel was worn. Useful if you know you’ll have a lot of non-wear time at the end.\nqwindow = Periods to calculate the variables over. Useful for day segement analysis (we’ll come back to this).\nqlevels = method to calculate the MX metrics\nilevels = calculate the amount of time in each of these ‘bins’. These would produce the same graph as we saw in the intensity gradients\niglevels = if you provide a number, it will calculate the intensity gradient. Can also set your own bins here, but the defaults are fine.\nmvpadur = bout durations for MVPA (in minutes)\nboutcriter = proportion of bout that needs to be above threshold\ndef.noc.sleep = how to define the sleep window. You can provide a time period, or use the least active 12 hours. Using a single number will use a detection algorithm.\nincludenightcrit = number of hours (between noon and noon) that need to be valid for sleep to be calculated\ntimewindow = period over which statistics are calculated. Either midnight to midnight (always = 1440) or wake to wake.\nvisualreport = combined report of part 2 and 4. Useful for particpants.\ndo.report = which sections to produce csv files from."
+  },
+  {
+    "objectID": "slides.html#output-contents",
+    "href": "slides.html#output-contents",
+    "title": "Workshop Slides",
+    "section": "Output contents",
+    "text": "Output contents\n\nmeta/\n\nMilestone data\nSleep data quality plots\n\nresults/\n\nReports from each part\nQC/\n\nUncleaned versions of reports\n\nfile summary reports/\n\nSummary reports for participants\n\n\nconfig.csv"
+  },
+  {
+    "objectID": "slides.html#report-contents",
+    "href": "slides.html#report-contents",
+    "title": "Workshop Slides",
+    "section": "Report contents",
+    "text": "Report contents\n\n‘summary’ vs ‘day|night|person summary’\nIf you’ve done part 5, the results you want are probably there"
+  },
+  {
+    "objectID": "slides.html#ggir-column-names",
+    "href": "slides.html#ggir-column-names",
+    "title": "Workshop Slides",
+    "section": "GGIR column names",
+    "text": "GGIR column names\n\nColumn names from GGIR can be hard to follow!\nThe vignette is a great resource."
+  },
+  {
+    "objectID": "slides.html#understanding-the-output-files",
+    "href": "slides.html#understanding-the-output-files",
+    "title": "Workshop Slides",
+    "section": "Understanding the output files",
+    "text": "Understanding the output files\n\nPart 5\nSome of the key abbreviations:\n\nAverages: _pla (plain); _wei (weighted); _WD (weekday); _WE (weekend)\nIntensities: IN (inactive); LIG (light); MOD (moderate); VIG (vigorous)\n\nSome of the key columns:\n\nNvaliddays*\ndur_day_total_[IN|LIG|MOD|VIG]_min\nACC_day_mg\nig_gradient\ndur_spt_min\nsleep_efficiency"
+  },
+  {
+    "objectID": "slides.html#understanding-the-output-files-1",
+    "href": "slides.html#understanding-the-output-files-1",
+    "title": "Workshop Slides",
+    "section": "Understanding the output files",
+    "text": "Understanding the output files\n\nPart 4\nSome of the key columns (not in part 5):\n\nSleepRegularityIndex"
+  },
+  {
+    "objectID": "slides.html#understanding-the-output-files-2",
+    "href": "slides.html#understanding-the-output-files-2",
+    "title": "Workshop Slides",
+    "section": "Understanding the output files",
+    "text": "Understanding the output files\n\nPart 2\nSome of the key abbreviations:\n\nAverages: AD (all days); WD (weekday); WE (weekend); WWD (weighted weekday); WWE (weighted weekend)\n\nSome of the key columns (not in part 5):\n\nAD_p99.65278_ENMO_mg_0.24hr (MX metrics)\nAD_.0.50._ENMO_mg_0.24hr (ilevels)"
+  },
+  {
+    "objectID": "slides.html#activity-code-breaking",
+    "href": "slides.html#activity-code-breaking",
+    "title": "Workshop Slides",
+    "section": "Activity: Code breaking",
+    "text": "Activity: Code breaking\nFind a column in one of the outputs that is confusing, and see if you can decipher it using the vignette"
+  },
+  {
+    "objectID": "slides.html#running-in-multiple-steps",
+    "href": "slides.html#running-in-multiple-steps",
+    "title": "Workshop Slides",
+    "section": "Running in Multiple Steps",
+    "text": "Running in Multiple Steps\n\nPart 1 can be run first (e.g., left overnight), before experimenting with parts 2-5.\nIf you make changes to parts 2-5, remember to set overwrite = TRUE.\n\n\n\n# Run Part 1\nGGIR(\n  mode = 1,\n  datadir = \"C:/mystudy/mydata\",\n  outputdir = \"C:/myresults\",\n  # Any other Part 1 args\n)\n\n# Run Parts 2-5\nGGIR(\n  mode = c(2, 3, 4, 5),\n  datadir = \"C:/mystudy/mydata\",\n  outputdir = \"C:/myresults\",\n  overwrite = TRUE\n  # Your part 2-5 arguments\n)"
+  },
+  {
+    "objectID": "slides.html#day-segmentation",
+    "href": "slides.html#day-segmentation",
+    "title": "Workshop Slides",
+    "section": "Day Segmentation",
+    "text": "Day Segmentation\n\nClock based\n\nGreat for when all particpants share the same schedule you want to test.\nJust provide additional values in qwindow\nNote that this complicates qlevels\n\n\nExample: You want to see if your intervention improves physical activity during school, or if there are changes before or after school. School runs from 8:30am to 3:15pm.\n\n\n\nGGIR(\n  mode = c(1, 2, 3, 4, 5),\n  datadir = \"C:/mystudy/mydata\",\n  outputdir = \"D:/myresults\",\n  ... # Other args\n  qwindow = c(0, 8.5, 15.25, 24),\n  ... # Other args\n)"
+  },
+  {
+    "objectID": "slides.html#day-segmentation-1",
+    "href": "slides.html#day-segmentation-1",
+    "title": "Workshop Slides",
+    "section": "Day Segmentation",
+    "text": "Day Segmentation\n\nActivity log based\n\nUsed when participants have varied schedules\nYou will need a participant-completed activity log, formatted correctly\nProvide this log to qwindow\nqlevels is almost impossible for anything other than overall\n\n\nExample: You are interested in physical activity during people’s commutes. Participants completed a daily log of when they commuted.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ndate\nto_work\nwork\nfrom_work\nhome\ndate\nto_work\nwork\nfrom_work\nhome\n\n\n\n\n201\n26-05-2017\n08:15:00\n08:30:00\n17:00:00\n17:31:00\n27-05-2017\n\n\n\n17:31:00\n\n\n202\n25-05-2017\n07:25:00\n08:00:00\n16:50:00\n17:20:00\n26-05-2017\n07:25:00\n08:00:00\n16:50:00\n17:20:00\n\n\n203\n27-05-2017\n08:11:00\n09:01:00\n17:11:00\n17:55:00\n28-05-2017\n08:11:00\n09:01:00\n17:11:00\n17:55:00\n\n\n\n\n\n\nGGIR(\n  mode = c(1, 2, 3, 4, 5),\n  datadir = \"C:/mystudy/mydata\",\n  outputdir = \"D:/myresults\",\n  ... # Other args\n  qwindow = \"C:/mystudy/myactivitylogs.csv\",\n  ... # Other args\n)"
+  },
+  {
+    "objectID": "slides.html#using-different-cut-points",
+    "href": "slides.html#using-different-cut-points",
+    "title": "Workshop Slides",
+    "section": "Using different cut-points",
+    "text": "Using different cut-points\n\nThere’s a great write up of published cut-points and how to use them\nIn some cases, you need to use a different Part 1 metric (e.g., ENMOa)"
+  },
+  {
+    "objectID": "slides.html#contact-details",
+    "href": "slides.html#contact-details",
+    "title": "Workshop Slides",
+    "section": "Contact Details",
+    "text": "Contact Details\n\nDr Taren Sanders\nInstitute for Positive Psychology and Education, Australian Catholic University\nTaren.Sanders@acu.edu.au"
   }
 ]
