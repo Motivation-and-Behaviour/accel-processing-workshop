@@ -100,6 +100,8 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -408,7 +410,11 @@ Dr Taren Sanders
 </section>
 <section id="before-we-start" class="slide level2">
 <h2>Before We Start</h2>
-<p>Please go to <a href="https://bit.ly/GGIRWorkshop">bit.ly/GGIRWorkshop</a> and follow the <em>Getting Started</em> instructions.</p>
+<div style="text-align: center; margin-top: 4em">
+<p>Please go to</p>
+<p><a href="https://bit.ly/GGIRWorkshop">bit.ly/GGIRWorkshop</a></p>
+<p>and follow the <em>Getting Started</em> instructions.</p>
+</div>
 </section>
 <section>
 <section id="introduction" class="title-slide slide level1 center" data-background="#3C1053">
@@ -718,7 +724,7 @@ Dr Taren Sanders
 <ul>
 <li class="fragment">Convert detected inactivity in sleep window to sleep</li>
 <li class="fragment"><em>Or</em> use sleep diary for sleep window</li>
-<li class="fragment">**Output:* Part 4 reports</li>
+<li class="fragment"><strong>Output:</strong> Part 4 reports</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="imgs/JMBP_Fig1_4.PNG" height="550"></p>
@@ -732,7 +738,7 @@ Dr Taren Sanders
 <h3 id="part-5">Part 5</h3>
 <ul>
 <li class="fragment">Collate data from Part 2 and Part 4 for final report</li>
-<li class="fragment">**Output:* Part 5 reports</li>
+<li class="fragment"><strong>Output:</strong> Part 5 reports</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="imgs/JMBP_Fig1_5.PNG" height="550"></p>
@@ -931,25 +937,25 @@ Dr Taren Sanders
 <h2 data-id="quarto-animate-title">Running the main GGIR function</h2>
 <h4 id="good-starting-place">Good starting place</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|2|3-4|5-22|8|9|10|11|12-17|18|19|20|21-22|23-28|26|27|28|29-36|32|33-34|35|36|37-41|40|41|"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a><span class="fu">GGIR</span>(</span>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|2|3-4|5-23|8|9|10|11|12|13-19|20|21|22|23-24|25-30|28|29|30|31-38|34|35-36|37|38|39-43|42|43|"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a><span class="fu">GGIR</span>(</span>
 <span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>  <span class="at">mode =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
 <span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a>  <span class="at">datadir =</span> <span class="st">"C:/mystudy/mydata"</span>,</span>
 <span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a>  <span class="at">outputdir =</span> <span class="st">"D:/myresults"</span>,</span>
 <span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a>  <span class="co"># =====================</span></span>
 <span id="cb5-6" class="hljs-ln-code"><a href="#cb5-6"></a>  <span class="co"># Part 2</span></span>
 <span id="cb5-7" class="hljs-ln-code"><a href="#cb5-7"></a>  <span class="co"># =====================</span></span>
-<span id="cb5-8" class="hljs-ln-code"><a href="#cb5-8"></a>  <span class="at">strategy =</span> <span class="dv">2</span>,</span>
-<span id="cb5-9" class="hljs-ln-code"><a href="#cb5-9"></a>  <span class="at">maxdur =</span> <span class="dv">9</span>,</span>
-<span id="cb5-10" class="hljs-ln-code"><a href="#cb5-10"></a>  <span class="at">includedaycrit =</span> <span class="dv">16</span>,</span>
-<span id="cb5-11" class="hljs-ln-code"><a href="#cb5-11"></a>  <span class="at">qwindow =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>),</span>
-<span id="cb5-12" class="hljs-ln-code"><a href="#cb5-12"></a>  <span class="at">qlevels =</span> <span class="fu">c</span>(</span>
-<span id="cb5-13" class="hljs-ln-code"><a href="#cb5-13"></a>    <span class="dv">960</span> <span class="sc">/</span> <span class="dv">1440</span>, <span class="co"># Top 8 hours</span></span>
-<span id="cb5-14" class="hljs-ln-code"><a href="#cb5-14"></a>    <span class="dv">1320</span> <span class="sc">/</span> <span class="dv">1440</span>, <span class="co"># Top 120min</span></span>
-<span id="cb5-15" class="hljs-ln-code"><a href="#cb5-15"></a>    <span class="dv">1380</span> <span class="sc">/</span> <span class="dv">1440</span>, <span class="co"># Top 60min</span></span>
-<span id="cb5-16" class="hljs-ln-code"><a href="#cb5-16"></a>    <span class="dv">1410</span> <span class="sc">/</span> <span class="dv">1440</span>, <span class="co"># Top 30min</span></span>
-<span id="cb5-17" class="hljs-ln-code"><a href="#cb5-17"></a>    <span class="dv">1425</span> <span class="sc">/</span> <span class="dv">1440</span>, <span class="co"># Top 15min</span></span>
-<span id="cb5-18" class="hljs-ln-code"><a href="#cb5-18"></a>    <span class="dv">1435</span> <span class="sc">/</span> <span class="dv">1440</span></span>
-<span id="cb5-19" class="hljs-ln-code"><a href="#cb5-19"></a>  ), <span class="co"># Top 5min</span></span>
+<span id="cb5-8" class="hljs-ln-code"><a href="#cb5-8"></a>  <span class="at">idloc =</span> <span class="dv">2</span>,</span>
+<span id="cb5-9" class="hljs-ln-code"><a href="#cb5-9"></a>  <span class="at">strategy =</span> <span class="dv">2</span>,</span>
+<span id="cb5-10" class="hljs-ln-code"><a href="#cb5-10"></a>  <span class="at">maxdur =</span> <span class="dv">9</span>,</span>
+<span id="cb5-11" class="hljs-ln-code"><a href="#cb5-11"></a>  <span class="at">includedaycrit =</span> <span class="dv">16</span>,</span>
+<span id="cb5-12" class="hljs-ln-code"><a href="#cb5-12"></a>  <span class="at">qwindow =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">24</span>),</span>
+<span id="cb5-13" class="hljs-ln-code"><a href="#cb5-13"></a>  <span class="at">qlevels =</span> <span class="fu">c</span>(</span>
+<span id="cb5-14" class="hljs-ln-code"><a href="#cb5-14"></a>    <span class="dv">960</span> <span class="sc">/</span> <span class="dv">1440</span>,   <span class="co"># Top 8 hours</span></span>
+<span id="cb5-15" class="hljs-ln-code"><a href="#cb5-15"></a>    <span class="dv">1320</span> <span class="sc">/</span> <span class="dv">1440</span>,  <span class="co"># Top 120min</span></span>
+<span id="cb5-16" class="hljs-ln-code"><a href="#cb5-16"></a>    <span class="dv">1380</span> <span class="sc">/</span> <span class="dv">1440</span>,  <span class="co"># Top 60min</span></span>
+<span id="cb5-17" class="hljs-ln-code"><a href="#cb5-17"></a>    <span class="dv">1410</span> <span class="sc">/</span> <span class="dv">1440</span>,  <span class="co"># Top 30min</span></span>
+<span id="cb5-18" class="hljs-ln-code"><a href="#cb5-18"></a>    <span class="dv">1425</span> <span class="sc">/</span> <span class="dv">1440</span>,  <span class="co"># Top 15min</span></span>
+<span id="cb5-19" class="hljs-ln-code"><a href="#cb5-19"></a>    <span class="dv">1435</span> <span class="sc">/</span> <span class="dv">1440</span>), <span class="co"># Top 5min</span></span>
 <span id="cb5-20" class="hljs-ln-code"><a href="#cb5-20"></a>  <span class="at">ilevels =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">4000</span>, <span class="dv">50</span>),</span>
 <span id="cb5-21" class="hljs-ln-code"><a href="#cb5-21"></a>  <span class="at">iglevels =</span> <span class="dv">1</span>,</span>
 <span id="cb5-22" class="hljs-ln-code"><a href="#cb5-22"></a>  <span class="at">mvpathreshold =</span> <span class="fu">c</span>(<span class="dv">100</span>),</span>
@@ -977,6 +983,7 @@ Dr Taren Sanders
 <span id="cb5-44" class="hljs-ln-code"><a href="#cb5-44"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
+<p><code>idloc</code> = how to extract the ID number</p>
 <p><code>strategy</code> = how study was setup. <code>2</code> means use data between first and last midnight. You can also use strategies based on cutting off hours at the start or end, the most active days, or just everything after the first midnight.</p>
 <p><code>maxdur</code> = max number of days accel was worn. Useful if you know you’ll have a lot of non-wear time at the end.</p>
 <p><code>qwindow</code> = Periods to calculate the variables over. Useful for day segement analysis (we’ll come back to this).</p>
@@ -1002,14 +1009,11 @@ Dr Taren Sanders
           display:block!important;
       }</style></aside>
 </section></section>
-<section>
 <section id="activity-basic-ggir-processing" class="title-slide slide level1 center" data-background="#3C1053">
 <h1>Activity: Basic GGIR Processing</h1>
 
 </section>
-<section id="common-issues-and-troubleshooting" class="slide level2">
-<h2>Common issues and troubleshooting</h2>
-</section></section>
+
 <section>
 <section id="interpreting-the-output" class="title-slide slide level1 smaller center" data-background="#3C1053">
 <h1>Interpreting the Output</h1>
@@ -1041,63 +1045,236 @@ Dr Taren Sanders
 <section id="report-contents" class="slide level2">
 <h2>Report contents</h2>
 <ul>
-<li class="fragment">‘summary’ vs ‘daysummary’ (or ‘nightsummary’)</li>
+<li class="fragment">‘summary’ vs ‘day|night|person summary’</li>
+<li class="fragment">If you’ve done part 5, the results you want are probably there</li>
 </ul>
 </section>
-<section id="understanding-the-output-files" class="slide level2">
+<section id="ggir-column-names" class="slide level2">
+<h2>GGIR column names</h2>
+<ul>
+<li class="fragment">Column names from GGIR can be hard to follow!</li>
+<li class="fragment">The <a href="https://cran.r-project.org/web/packages/GGIR/vignettes/GGIR.html#4_Inspecting_the_results">vignette</a> is a great resource.</li>
+</ul>
+</section>
+<section id="understanding-the-output-files" class="slide level2 smaller">
 <h2>Understanding the output files</h2>
+<h3 id="part-5-1">Part 5</h3>
+<p>Some of the key abbreviations:</p>
 <ul>
-<li class="fragment">Summary statistics</li>
-<li class="fragment">Sleep analysis</li>
-<li class="fragment">Physical activity analysis</li>
+<li class="fragment">Averages: <code>_pla</code> (plain); <code>_wei</code> (weighted); <code>_WD</code> (weekday); <code>_WE</code> (weekend)</li>
+<li class="fragment">Intensities: <code>IN</code> (inactive); <code>LIG</code> (light); <code>MOD</code> (moderate); <code>VIG</code> (vigorous)</li>
+</ul>
+<p>Some of the key columns:</p>
+<ul>
+<li class="fragment"><code>Nvaliddays*</code></li>
+<li class="fragment"><code>dur_day_total_[IN|LIG|MOD|VIG]_min</code></li>
+<li class="fragment"><code>ACC_day_mg</code></li>
+<li class="fragment"><code>ig_gradient</code></li>
+<li class="fragment"><code>dur_spt_min</code></li>
+<li class="fragment"><code>sleep_efficiency</code></li>
 </ul>
 </section>
-<section id="visualizing-the-data" class="slide level2">
-<h2>Visualizing the data</h2>
+<section id="understanding-the-output-files-1" class="slide level2 smaller">
+<h2>Understanding the output files</h2>
+<h3 id="part-4-1">Part 4</h3>
+<p>Some of the key columns (not in part 5):</p>
 <ul>
-<li class="fragment">Time-series plots</li>
-<li class="fragment">Summary plots</li>
+<li class="fragment"><code>SleepRegularityIndex</code></li>
 </ul>
 </section>
-<section id="activity-group-discussion" class="slide level2">
-<h2>Activity: Group discussion</h2>
-<p>Interpret the output from the hands-on session</p>
+<section id="understanding-the-output-files-2" class="slide level2 smaller">
+<h2>Understanding the output files</h2>
+<h3 id="part-2-1">Part 2</h3>
+<p>Some of the key abbreviations:</p>
+<ul>
+<li class="fragment">Averages: <code>AD</code> (all days); <code>WD</code> (weekday); <code>WE</code> (weekend); <code>WWD</code> (weighted weekday); <code>WWE</code> (weighted weekend)</li>
+</ul>
+<p>Some of the key columns (not in part 5):</p>
+<ul>
+<li class="fragment"><code>AD_p99.65278_ENMO_mg_0.24hr</code> (MX metrics)</li>
+<li class="fragment"><code>AD_.0.50._ENMO_mg_0.24hr</code> (ilevels)</li>
+</ul>
+</section>
+<section id="activity-code-breaking" class="slide level2">
+<h2>Activity: Code breaking</h2>
+<p>Find a column in one of the outputs that is confusing, and see if you can decipher it using the <a href="https://cran.r-project.org/web/packages/GGIR/vignettes/GGIR.html#4_Inspecting_the_results">vignette</a></p>
 </section></section>
 <section>
-<section id="exploring-advanced-options-in-ggir" class="title-slide slide level1 center">
-<h1>Exploring Advanced Options in GGIR</h1>
+<section id="exploring-other-options-in-ggir" class="title-slide slide level1 smaller center" data-background="#3C1053">
+<h1>Exploring Other Options in GGIR</h1>
 
 </section>
-<section id="customizing-sleep-and-physical-activity-metrics" class="slide level2">
-<h2>Customizing sleep and physical activity metrics</h2>
+<section id="running-in-multiple-steps" class="slide level2">
+<h2>Running in Multiple Steps</h2>
 <ul>
-<li class="fragment">Modifying detection thresholds</li>
-<li class="fragment">Adjusting epoch lengths</li>
+<li class="fragment">Part 1 can be run first (e.g., left overnight), before experimenting with parts 2-5.</li>
+<li class="fragment">If you make changes to parts 2-5, remember to set <code>overwrite = TRUE</code>.</li>
 </ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="|1-8|3|4-5|6|9-17|11|12-13|14|15-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># Run Part 1</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">GGIR</span>(</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">mode =</span> <span class="dv">1</span>,</span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="at">datadir =</span> <span class="st">"C:/mystudy/mydata"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="at">outputdir =</span> <span class="st">"C:/myresults"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="co"># Any other Part 1 args</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="co"># Run Parts 2-5</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="fu">GGIR</span>(</span>
+<span id="cb6-11"><a href="#cb6-11"></a>  <span class="at">mode =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="at">datadir =</span> <span class="st">"C:/mystudy/mydata"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13"></a>  <span class="at">outputdir =</span> <span class="st">"C:/myresults"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14"></a>  <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a>  <span class="co"># Your part 2-5 arguments</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="working-with-multiple-devices-and-data-sources" class="slide level2">
-<h2>Working with multiple devices and data sources</h2>
+<section id="day-segmentation" class="slide level2 smaller">
+<h2>Day Segmentation</h2>
+<h3 id="clock-based">Clock based</h3>
 <ul>
-<li class="fragment">Combining data from different accelerometers</li>
-<li class="fragment">Integrating external data sources</li>
+<li class="fragment">Great for when all particpants share the same schedule you want to test.</li>
+<li class="fragment">Just provide additional values in <code>qwindow</code></li>
+<li class="fragment">Note that this complicates <code>qlevels</code></li>
 </ul>
+<div class="fragment">
+<p><strong>Example</strong>: You want to see if your intervention improves physical activity during school, or if there are changes before or after school. School runs from 8:30am to 3:15pm.</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|6|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">GGIR</span>(</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="at">mode =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="at">datadir =</span> <span class="st">"C:/mystudy/mydata"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">outputdir =</span> <span class="st">"D:/myresults"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  ... <span class="co"># Other args</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="at">qwindow =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">8.5</span>, <span class="fl">15.25</span>, <span class="dv">24</span>),</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  ... <span class="co"># Other args</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
-<section id="activity-hands-on-session" class="slide level2">
-<h2>Activity: Hands-on session</h2>
-<p>Explore advanced options with sample data</p>
+<section id="day-segmentation-1" class="slide level2 smaller">
+<h2>Day Segmentation</h2>
+<h3 id="activity-log-based">Activity log based</h3>
+<ul>
+<li class="fragment">Used when participants have varied schedules</li>
+<li class="fragment">You will need a participant-completed activity log, formatted correctly</li>
+<li class="fragment">Provide this log to <code>qwindow</code></li>
+<li class="fragment"><code>qlevels</code> is almost impossible for anything other than overall</li>
+</ul>
+<div class="fragment">
+<p><em>Example</em>: You are interested in physical activity during people’s commutes. Participants completed a daily log of when they commuted.</p>
+</div>
+<div class="fragment" style="font-size: 0.5em">
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>id</strong></th>
+<th><strong>date</strong></th>
+<th><strong>to_work</strong></th>
+<th><strong>work</strong></th>
+<th><strong>from_work</strong></th>
+<th><strong>home</strong></th>
+<th><strong>date</strong></th>
+<th><strong>to_work</strong></th>
+<th><strong>work</strong></th>
+<th><strong>from_work</strong></th>
+<th><strong>home</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>201</td>
+<td>26-05-2017</td>
+<td>08:15:00</td>
+<td>08:30:00</td>
+<td>17:00:00</td>
+<td>17:31:00</td>
+<td>27-05-2017</td>
+<td></td>
+<td></td>
+<td></td>
+<td>17:31:00</td>
+</tr>
+<tr class="even">
+<td>202</td>
+<td>25-05-2017</td>
+<td>07:25:00</td>
+<td>08:00:00</td>
+<td>16:50:00</td>
+<td>17:20:00</td>
+<td>26-05-2017</td>
+<td>07:25:00</td>
+<td>08:00:00</td>
+<td>16:50:00</td>
+<td>17:20:00</td>
+</tr>
+<tr class="odd">
+<td>203</td>
+<td>27-05-2017</td>
+<td>08:11:00</td>
+<td>09:01:00</td>
+<td>17:11:00</td>
+<td>17:55:00</td>
+<td>28-05-2017</td>
+<td>08:11:00</td>
+<td>09:01:00</td>
+<td>17:11:00</td>
+<td>17:55:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|6|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">GGIR</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="at">mode =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>),</span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="at">datadir =</span> <span class="st">"C:/mystudy/mydata"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="at">outputdir =</span> <span class="st">"D:/myresults"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>  ... <span class="co"># Other args</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="at">qwindow =</span> <span class="st">"C:/mystudy/myactivitylogs.csv"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>  ... <span class="co"># Other args</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="using-different-cut-points" class="slide level2">
+<h2>Using different cut-points</h2>
+<ul>
+<li class="fragment">There’s a great write up of <a href="https://cran.r-project.org/web/packages/GGIR/vignettes/CutPoints.html">published cut-points and how to use them</a></li>
+<li class="fragment">In some cases, you need to use a different Part 1 metric (e.g., ENMOa)</li>
+</ul>
 </section></section>
-<section>
-<section id="wrap-up-and-qa" class="title-slide slide level1 center">
-<h1>Wrap-up and Q&amp;A</h1>
+<section id="activity-challenges" class="title-slide slide level1 center" data-background="#3C1053">
+<h1>Activity: Challenges</h1>
 
 </section>
-<section id="recap-of-the-workshop" class="slide level2">
-<h2>Recap of the workshop</h2>
-<p>Brief summary of the workshop</p>
+
+<section>
+<section id="qa" class="title-slide slide level1 center" data-background="#3C1053">
+<h1>Q&amp;A</h1>
+
 </section>
-<section id="open-discussion-and-qa" class="slide level2">
-<h2>Open discussion and Q&amp;A</h2>
-<p>Ask questions and share your thoughts</p>
+<section id="contact-details" class="slide level2">
+<h2>Contact Details</h2>
+<h3 id="dr-taren-sanders">Dr Taren Sanders</h3>
+<p>Institute for Positive Psychology and Education, Australian Catholic University</p>
+<p><a href="mailto:taren.sanders@acu.edu.au">Taren.Sanders@acu.edu.au</a></p>
 
 
 <img src="https://forms.acu.edu.au/__data/assets/file/0020/2330642/ACU_MASTERBRAND_POS_RGB.svg" class="slide-logo r-stretch"><div class="footer footer-default">
@@ -1114,6 +1291,7 @@ Dr Taren Sanders
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1135,7 +1313,8 @@ Dr Taren Sanders
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1306,7 +1485,7 @@ Dr Taren Sanders
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
