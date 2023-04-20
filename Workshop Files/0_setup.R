@@ -41,7 +41,7 @@ for (i in seq_along(files$name)) {
 }
 
 # Setup an output folders
-output_dirs <- c("GGIR_Basics")
+output_dirs <- c("GGIR_Basics", "GGIR_Other")
 
 for (outdir in output_dirs) {
   dir.create(

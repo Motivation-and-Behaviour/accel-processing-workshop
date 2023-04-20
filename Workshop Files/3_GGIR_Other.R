@@ -1,21 +1,27 @@
-# Let's do the basics of running GGIR
 library(GGIR)
 
-# It's a good idea to put the key arguements into variables. It makes it easier
-# to tweak the settings later.
+# Running GGIR in multiple steps
 
 datadir <- file.path(getwd(), "data", "GeneActiv")
-outputdir <- file.path(getwd(), "output", "GGIR_Basics")
+outputdir <- file.path(getwd(), "output", "GGIR_Other")
 # These are from Hildebrand
 lig_thresh <- 51.6
 mod_thresh <- 191.6
 vig_thresh <- 695.8
 
-# This is the main GGIR call from the slides
+# Run part 1
 GGIR(
-  mode = c(1, 2, 3, 4, 5),
+  mode = 1,
+  datadir = datadir,
+  outputdir = outputdir
+)
+
+# Can now run the much faster parts 2-5
+GGIR(
+  mode = c(2, 3, 4, 5),
   datadir = datadir,
   outputdir = outputdir,
+  overwrite = TRUE,
   # =====================
   # Part 2
   # =====================
@@ -23,7 +29,7 @@ GGIR(
   strategy = 2,
   maxdur = 9,
   includedaycrit = 16,
-  qwindow = c(0, 24),
+  qwindow = c(0, 8.5, 15.25, 24),
   qlevels = c(
     960 / 1440, # Top 8 hours
     1320 / 1440, # Top 120min

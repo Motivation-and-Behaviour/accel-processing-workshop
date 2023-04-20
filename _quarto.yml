@@ -18,7 +18,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - slides.qmd
 
 format:
@@ -34,6 +33,7 @@ format:
     preview-links: true
     highlight-style: github
     code-annotations: select
+    chalkboard: true
     logo: "https://forms.acu.edu.au/__data/assets/file/0020/2330642/ACU_MASTERBRAND_POS_RGB.svg"
     footer: motivation-and-behaviour.github.io/accel-processing-workshop
 

@@ -45,10 +45,29 @@ Again, just follow the install steps they provide to get started.
 
 ### Download Workshop Files
 
-I've provided some example data files and scripts to use during the workshop.
+I've provided some example scripts to use during the workshop.
 To download these: 
 
 1. Head to the [GitHub Repository](https://github.com/Motivation-and-Behaviour/accel-processing-workshop)
 2. Click `Code` then `Download ZIP`  
 ![](imgs/Download_Examples.png){fig-alt="Screenshot of GitHub Repo download button"}
 3. Unzip the files. You will only need the `Workshop Files` folder.
+
+### Run the Setup Script
+
+You'll also need to install a few packages, and download some example files.
+Fortunately, there's a script to help:
+
+1. In your unzipped `Workshop Files` folder, double click the `workshop_files.Rproj` file. RStudio should open.  
+![](imgs/Setup_1.png)
+2. On the right hand panel, click the `0_setup.R` file.  
+![](imgs/Setup_2.png)
+3. In the large left hand panel, click the `Source` button to run the script. It will take a few minutes.  
+![](imgs/Setup_3.png)
+
+If you have any issues with the above, just reach out.
+
+## Resources
+
+* [GGIR Vignette](https://cran.r-project.org/web/packages/GGIR/vignettes/GGIR.html)
+* [Published cut-points](https://cran.r-project.org/web/packages/GGIR/vignettes/CutPoints.html)
